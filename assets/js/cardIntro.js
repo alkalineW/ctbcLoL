@@ -1,12 +1,58 @@
-// old browser do NOT support nodeList.forEach()!!!
-if (window.NodeList && !NodeList.prototype.forEach) {
-	NodeList.prototype.forEach = function (callback, thisArg) {
-		thisArg = thisArg || window;
-		for (var i = 0; i < this.length; i++) {
-			callback.call(thisArg, this[i], i, this);
+// array for.. of loop
+// Array.of
+/*! https://mths.be/array-of v0.1.0 by @mathias */
+(function () {
+	'use strict';
+	var defineProperty = (function () {
+		// IE 8 only supports `Object.defineProperty` on DOM elements
+		try {
+			var object = {};
+			var $defineProperty = Object.defineProperty;
+			var result = $defineProperty(object, object, object) && $defineProperty;
+		} catch (error) { /**/ }
+		return result;
+	}());
+	var isConstructor = function isConstructor(Constructor) {
+		try {
+			return !!new Constructor();
+		} catch (_) {
+			return false;
 		}
 	};
-}
+	var of = function of() {
+		var items = arguments;
+		var length = items.length;
+		var Me = this;
+		var result = isConstructor(Me) ? new Me(length) : new Array(length);
+		var index = 0;
+		var value;
+		while (index < length) {
+			value = items[index];
+			if (defineProperty) {
+				defineProperty(result, index, {
+					'value': value,
+					'writable': true,
+					'enumerable': true,
+					'configurable': true
+				});
+			} else {
+				result[index] = value;
+			}
+			index += 1;
+		}
+		result.length = length;
+		return result;
+	};
+	if (defineProperty) {
+		defineProperty(Array, 'of', {
+			'value': of,
+			'configurable': true,
+			'writable': true
+		});
+	} else {
+		Array.of = of;
+	}
+}());
 
 //- global variable
 var currentGenre = "hero"; // default showed hero-switcher & hero-slider
@@ -14,14 +60,27 @@ var currentGenre = "hero"; // default showed hero-switcher & hero-slider
 var genreList = document.querySelectorAll(".genre-switcher li");
 var roundSwitcher = document.querySelectorAll(".round-switcher");
 var switcherItem = document.querySelectorAll(".switcher-item");
-
 var cardSlider = document.querySelectorAll(".card-slider");
 
+//- function that show correspond roundSwitcher / cardSlider & slide to slide
+function showCorrespond(genre, slideNum, sliderBg) {
+	console.log(`showCorrespond ${genre} ${sliderBg} `);
+	toggleShowedParts(roundSwitcher, genre, sliderBg);
+	toggleShowedParts(cardSlider, genre, sliderBg);
+	currentGenre = genre; // set currentGenre from parmeter
+	$("#" + genre + "-slider").slick("slickGoTo", slideNum);
+
+	genreList.forEach(function (elm) {
+		findCorrespondElm(elm, elm.dataset.genre, currentGenre, "active-genre");
+	});
+}
+
+
 //- prepend / append fake button & bind event to fake button
-cardSlider.forEach((elm, i) => {
-	let fakeArrowNext = document.createElement("button");
-	let fakeArrowPrev = document.createElement("button");
-	fakeArrowNext.addEventListener("click", () => {
+cardSlider.forEach(function (elm, i) {
+	var fakeArrowNext = document.createElement("button");
+	var fakeArrowPrev = document.createElement("button");
+	fakeArrowNext.addEventListener("click", function () {
 		if (i === 0) {
 			showCorrespond("puro", 0, "credit6");
 		} else if (i === 1) {
@@ -30,7 +89,7 @@ cardSlider.forEach((elm, i) => {
 			showCorrespond("hero", 0, "credit1");
 		}
 	});
-	fakeArrowPrev.addEventListener("click", () => {
+	fakeArrowPrev.addEventListener("click", function () {
 		if (i === 0) {
 			showCorrespond("classic", 1, "debit7");
 		} else if (i === 1) {
@@ -45,18 +104,6 @@ cardSlider.forEach((elm, i) => {
 	elm.prepend(fakeArrowPrev);
 });
 
-//- function that show correspond roundSwitcher / cardSlider & slide to slide
-function showCorrespond(genre, slideNum, sliderBg) {
-	console.log(`showCorrespond ${genre} ${sliderBg} `);
-	toggleShowedParts(roundSwitcher, genre, sliderBg);
-	toggleShowedParts(cardSlider, genre, sliderBg);
-	currentGenre = genre; // set currentGenre from parmeter
-	$("#" + genre + "-slider").slick("slickGoTo", slideNum);
-
-	genreList.forEach((elm) => {
-		findCorrespondElm(elm, elm.dataset.genre, currentGenre, "active-genre");
-	});
-}
 
 //- hozcard switch to specific card intro
 function hozSlickTo() {
@@ -164,8 +211,6 @@ function resetTitleStatus() {
 
 $(".card-slider").on("afterChange", function () {
 	changeSlideHandler.call(this, this, currentGenre);
-	//--test
-	// checkIfEndOfSlide(currentGenre);
 });
 
 $(".card-slider").on("beforeChange", function () {
@@ -280,51 +325,3 @@ function activeSwitcher(id) {
 		findCorrespondElm(elm, elm.dataset.slide, id, "active");
 	});
 }
-
-// function checkIfEndOfSlide(genreG) {
-// 	var targetElm = document.getElementById(genreG + "-slider");
-// 	// console.log(targetElm);
-// 	// targetElm.addEventListener("swiped-right", rightSwipe);
-// 	targetElm.addEventListener(
-// 		"swiped-right",
-// 		function rightSwipe(e) {
-// 			e.currentTarget.removeEventListener(e.type, rightSwipe, false);
-// 			var slickArrowPrev = document.querySelector("#" + genreG + "-slider" + " .slick-prev");
-// 			var slickArrowNext = document.querySelector("#" + genreG + "-slider .slick-next");
-// 			if (slickArrowPrev.classList.contains("slick-disabled") && !slickArrowNext.classList.contains("slick-disabled")) {
-// 				// alert(`prev contains disable & next not contains disable`);
-// 				if (genreG == "hero") {
-// 					showCorrespond("classic", 1, "debit7");
-// 				} else if (genreG === "puro") {
-// 					showCorrespond("hero", 9, "debit5");
-// 				} else {
-// 					showCorrespond("puro", 1, "debit6");
-// 				}
-// 			} else {
-// 				return false;
-// 			}
-// 		},
-// 		{ once: true }
-// 	);
-
-// 	targetElm.addEventListener(
-// 		"swiped-left",
-// 		function leftSwipe(e) {
-// 			e.currentTarget.removeEventListener(e.type, leftSwipe, false);
-// 			var slickArrowNext = document.querySelector("#" + genreG + "-slider" + " .slick-next");
-// 			var slickArrowPrev = document.querySelector("#" + genreG + "-slider .slick-prev");
-// 			// alert(`slickArrowNext:${i}`);
-// 			if (slickArrowNext.classList.contains("slick-disabled") && !slickArrowPrev.classList.contains("slick-disabled")) {
-// 				if (genreG == "hero") {
-// 					showCorrespond("puro", 0, "credit6");
-// 				} else if (genreG === "puro") {
-// 					showCorrespond("classic", 0, "credit7");
-// 				} else {
-// 					showCorrespond("hero", 0, "credit1");
-// 				}
-// 			} else {
-// 				return false;
-// 			}
-// 		}, { once: true });
-// }
-

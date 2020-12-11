@@ -19,15 +19,11 @@ window.onload = function () {
 	];
 
 	// 跟選單發亮有關的東西
-	var navListDom = document.querySelectorAll("#navbarCollapse .nav-item");
-	var mobileNavListDom = document.querySelectorAll(".mobile-nav .nav-item");
-	var navItemPosYData = [];
-	//- navLink
-	// var navLink = document.getElementsByClassName("nav-link");
-	var navItem = document.getElementsByClassName("nav-item");
-
-	//- back to top
-	var backToTop = document.querySelectorAll(".back-to-top");
+	var navListDom = document.querySelectorAll("#navbarCollapse .nav-item"),
+		mobileNavListDom = document.querySelectorAll(".mobile-nav .nav-item"),
+		navItemPosYData = [],
+		navItem = document.getElementsByClassName("nav-item"),
+		backToTop = document.querySelectorAll(".back-to-top");
 
 	//- 卡片介紹內的led
 	var ledAniImg = document.querySelector(
@@ -47,8 +43,8 @@ window.onload = function () {
 	);
 
 	// 手機的 bottom menu
-	var mobileNav = document.getElementsByClassName("mobile-nav")[0];
-	var sideApply = document.getElementById("side-apply");
+	var mobileNav = document.getElementsByClassName("mobile-nav")[0],
+		sideApply = document.getElementById("side-apply");
 
 	var innerHeight = window.innerHeight;
 
@@ -128,9 +124,9 @@ window.onload = function () {
 	//- scroll back top
 	function showScrollBackToTop(scrollValue) {
 		if (scrollValue > 1200) {
-			backToTop[1].style.opacity = "1";
+			backToTop[2].style.opacity = "1";
 		} else {
-			backToTop[1].style.opacity = "0";
+			backToTop[2].style.opacity = "0";
 		}
 	}
 
@@ -139,9 +135,6 @@ window.onload = function () {
 		var targetElement = targetElement;
 		var triggerElementData = triggerElement.getBoundingClientRect();
 
-		// if (totallyLeaveRule) {
-		// 	console.log(`distance to triggerElement.top: ${MathFloor(triggerElementData.top)} triggerElement height: ${MathFloor(triggerElementData.height)} innerHeight: ${innerHeight}`);
-		// }
 		if (targetElement.length > 1) {
 			// 觸發元素出現在螢幕內的情況
 			if (MathFloor(triggerElementData.top) <= innerHeight) {
@@ -153,7 +146,7 @@ window.onload = function () {
 			if (
 				MathFloor(triggerElementData.top) < 0 &&
 				Math.abs(triggerElementData.top) >=
-					MathFloor(triggerElementData.height)
+				MathFloor(triggerElementData.height)
 			) {
 				targetElement.forEach(function (e) {
 					rmClass(e, "active");
@@ -177,7 +170,7 @@ window.onload = function () {
 			if (
 				MathFloor(triggerElementData.top) < 0 &&
 				Math.abs(triggerElementData.top) >=
-					MathFloor(triggerElementData.height)
+				MathFloor(triggerElementData.height)
 			) {
 				targetElement.classList.remove("active");
 			}
@@ -217,14 +210,6 @@ window.onload = function () {
 		var triggerItemTop = MathFloor(triggerItemData.top);
 		var triggerItemHeight = MathFloor(triggerItemData.height);
 
-		// console.log(
-		// 	`trigger top: ${triggerItemTop}
-		// 	trigger height: ${triggerItemHeight}
-		// 	innerHeight:${innerHeight}
-		// 	targetHeight:${jumpingIconHeight}
-		// 	jumpingIconTop:${jumpingIconTop}
-		// 	`
-		// );
 		if (triggerItemTop > innerHeight) {
 			jumpingIcon.classList.remove("active");
 		}
