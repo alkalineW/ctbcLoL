@@ -486,6 +486,10 @@ body {
 	box-sizing: border-box;
 	img {
 		max-width: 100%;
+		&:focus {
+			border: none;
+			outline: none;
+		}
 	}
 }
 
@@ -546,6 +550,7 @@ body {
 	}
 	// 專屬上方選單的
 	.nav-item {
+		cursor: pointer;
 		.nav-link {
 			padding: 16px 35px;
 			@include mdDesktop {
@@ -721,15 +726,15 @@ h4 {
 
 // kv part
 .kv-section {
-	background: url(../img/pageItem/bg/kv-bg.jpg) no-repeat center top;
+	background: url("../img/pageItem/bg/kvBg.jpg") no-repeat center top;
 	padding: 60px 0 100px 0;
 	position: relative;
 	@include tablet {
-		background: url(../img/pageItem/bg/kv-bg-tab.jpg) no-repeat center top;
+		background: url("../img/pageItem/bg/kvBgTab.jpg") no-repeat center top;
 		background-size: cover;
 	}
 	@include mobile {
-		background: url(../img/pageItem/bg/kv-bg-mobile-nu.jpg) no-repeat center
+		background: url("../img/pageItem/bg/kvBgMobileNu.jpg") no-repeat center
 			top;
 		background-size: cover;
 		padding: 50px 0 70px 0;
@@ -805,19 +810,19 @@ h4 {
 	.kv-slogan-wrap {
 		position: relative;
 		width: 100%;
-		padding:  0;
+		padding: 0;
 		max-width: 760px;
 		left: calc(50% - 380px);
 		z-index: 6;
 		margin: -15px 0 0 0;
 		// masking for flicker effect
-		-webkit-mask: url("../img/pageItem/kv/kv-slogan-mask.png") no-repeat
+		-webkit-mask: url("../img/pageItem/kv/kvSloganMask.png") no-repeat
 			center top;
-		mask: url("../img/pageItem/kv/kv-slogan-mask.png") no-repeat center top;
+		mask: url("../img/pageItem/kv/kvSloganMask.png") no-repeat center top;
 		-webkit-mask-size: contain;
 		mask-size: contain;
 		height: 220px;
-		background-image: url(../img/pageItem/kv/kv-slogan-1-bright.png);
+		background-image: url("../img/pageItem/kv/kvSloganBright.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		@include xlDesktop {
@@ -1191,23 +1196,23 @@ h4 {
 		}
 	}
 	&:before {
-		background: url("../img/pageItem/jumping-icon/divider-left.png");
+		background: url("../img/pageItem/jumpingIcon/dividerLeft.png");
 		background-repeat: no-repeat;
 		background-size: contain;
 		left: 5px;
 		@include mobile {
-			background: url("../img/pageItem/jumping-icon/divider-left-mobile.png");
+			background: url("../img/pageItem/jumpingIcon/dividerLeftMobile.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 		}
 	}
 	&:after {
-		background: url("../img/pageItem/jumping-icon/divider-right.png");
+		background: url("../img/pageItem/jumpingIcon/dividerRight.png");
 		background-repeat: no-repeat;
 		background-size: contain;
 		right: 5px;
 		@include mobile {
-			background: url("../img/pageItem/jumping-icon/divider-right-mobile.png");
+			background: url("../img/pageItem/jumpingIcon/dividerRightMobile.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 		}
@@ -1338,6 +1343,7 @@ h4 {
 .horz-card {
 	text-align: center;
 	position: relative;
+	cursor: pointer;
 	span {
 		font-size: 40px;
 		font-weight: bold;
@@ -1357,6 +1363,13 @@ h4 {
 	@include mobile {
 		@include size(20px, 37px);
 	}
+}
+.slick-initialized.slick-slide:focus,
+.slick-initialized.slick-slide:active,
+.slick-slide:focus,
+.slick-slide:active {
+	outline: none;
+	border: none;
 }
 // slick-arrow in card-intro
 .card-slider .slick-arrow {
@@ -1390,12 +1403,12 @@ h4 {
 	}
 }
 .slick-prev:before {
-	background: url("../img/pageItem/hero-intro/leftArrow.png");
+	background: url("../img/pageItem/heroIntro/leftArrow.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 .slick-next:before {
-	background: url("../img/pageItem/hero-intro/rightArrow.png");
+	background: url("../img/pageItem/heroIntro/rightArrow.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -1422,14 +1435,14 @@ h4 {
 }
 
 .hero-intro-wrap {
-	background: url("../img/pageItem/hero-intro/bg/fullBg-horz.jpg");
+	background: url("../img/pageItem/heroIntro/bg/fullBgHorz.jpg");
 	padding: 4% 0 5% 0;
 	transition: background 0.5s linear;
 	@include tablet {
 		padding: 12% 0;
 	}
 	@include mobile {
-		background: url("../img/pageItem/hero-intro/bg/fullBg-mobile.jpg");
+		background: url("../img/pageItem/heroIntro/bg/fullBgMobile.jpg");
 		min-height: calc(100vh - 50px);
 	}
 	.card-slider {
@@ -1502,11 +1515,11 @@ h4 {
 	.hero-title-wrap {
 		position: relative;
 		&:before {
-			background: url("../img/pageItem/hero-intro/switcher/deco-knotL.png");
+			background: url("../img/pageItem/heroIntro/switcher/decoKnotL.png");
 			left: 0;
 		}
 		&:after {
-			background: url("../img/pageItem/hero-intro/switcher/deco-knotR.png");
+			background: url("../img/pageItem/heroIntro/switcher/decoKnotR.png");
 			right: 0;
 		}
 		&:before,
@@ -1521,14 +1534,19 @@ h4 {
 			}
 		}
 	}
+	.hero-title-wrap.apply-wrap {
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
 	.card-paraph {
 		padding: 20px 0 0 0;
 		letter-spacing: 1px;
-		font-size: 20px;
-		line-height: 2rem;
+		font-size: 18px;
+		line-height: 1.9rem;
 		max-width: calc(100% - 40px);
 		@include mdDesktop {
-			font-size: 18px;
 			max-width: 100%;
 			letter-spacing: 0.5px;
 			line-height: 1.8rem;
@@ -1619,7 +1637,7 @@ h4 {
 		text-align: center;
 		font-size: 25px;
 		letter-spacing: 1px;
-		background: url("../img/pageItem/hero-intro/titlebg.png") no-repeat
+		background: url("../img/pageItem/heroIntro/titlebg.png") no-repeat
 			center;
 		background-size: contain;
 		@include mobile {
@@ -1668,29 +1686,32 @@ h4 {
 		}
 	}
 	.hero-title-col.apply-now {
-		background: url("../img/pageItem/hero-intro/titlebgFilled.png")
-			no-repeat center;
+		background: url("../img/pageItem/heroIntro/titlebgFilled.png") no-repeat
+			center;
 		background-size: contain;
 		&::before {
-			@include mobile {
-				display: none;
-			}
+			display: none;
+			// @include mobile {
+			// 	display: none;
+			// }
 		}
 		&::after {
-			@include mobile {
-				display: none;
-			}
+			display: none;
+			// @include mobile {
+			// 	display: none;
+			// }
 		}
 	}
 
 	// 立即申辦 金線
 	.hero-title-col.apply-now.active {
-		&::before {
-			animation: leftLine 1s 1s forwards 3;
-		}
-		&::after {
-			animation: rightLine 1s 1.5s forwards 3;
-		}
+		// &::before {
+
+		// 	animation: leftLine 1s 1s forwards 3;
+		// }
+		// &::after {
+		// 	animation: rightLine 1s 1.5s forwards 3;
+		// }
 	}
 	.hero-title {
 		position: relative;
@@ -1773,12 +1794,12 @@ h4 {
 			&:before {
 				@include pseudo(absolute, transparent);
 				@include size(10px, 7px);
-				top: 13px;
+				top: 12px;
 				z-index: 2;
 			}
 			// 切換單張 金線
 			&:after {
-				@include size(calc(100% - 140px), 2px);
+				@include size(calc(100% - 140px), 1px);
 				background-color: map-get($theme-color, golden);
 				content: "";
 				position: absolute;
@@ -1803,7 +1824,7 @@ h4 {
 				}
 				// 信用卡的金點點
 				&:before {
-					background: url("../img/pageItem/hero-intro/switcher/deco-knotL.png");
+					background: url("../img/pageItem/heroIntro/switcher/decoKnotL.png");
 					background-size: cover;
 					background-repeat: no-repeat;
 					left: 0;
@@ -1826,7 +1847,7 @@ h4 {
 					bottom: 21px;
 				}
 				&:before {
-					background: url("../img/pageItem/hero-intro/switcher/deco-knotR.png");
+					background: url("../img/pageItem/heroIntro/switcher/decoKnotR.png");
 					background-size: cover;
 					background-repeat: no-repeat;
 					right: 0;
@@ -1865,6 +1886,7 @@ h4 {
 			}
 		}
 		.switcher-item {
+			cursor: pointer;
 			transition: all cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s;
 			opacity: 0.4;
 			@include size(65px, 65px);
@@ -1933,7 +1955,7 @@ h4 {
 // bonus
 .bonus-sec {
 	padding: 5% 0;
-	background: url("../img/pageItem/bg/bonus-bg.jpg");
+	background: url("../img/pageItem/bg/bonusBg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -1942,6 +1964,10 @@ h4 {
 	}
 }
 .bonus-wrap {
+	padding: 15px 0 0 0;
+	@include mobile {
+		padding: 0;
+	}
 	.bonus-list {
 		max-width: 720px;
 		position: relative;
@@ -1960,6 +1986,7 @@ h4 {
 			margin: 10px 0 17px 0;
 		}
 		a {
+			cursor: pointer;
 			border: none;
 			outline: none;
 			position: absolute;
@@ -1987,12 +2014,12 @@ h4 {
 // 大禮包
 .gift-sec {
 	padding: 5% 0 7% 0;
-	background: url("../img/pageItem/bg/gift-bg.jpg");
+	background: url("../img/pageItem/bg/giftBg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	@include tablet {
-		background: url("../img/pageItem/bg/gift-bg-mobile.jpg");
+		background: url("../img/pageItem/bg/giftBgMobile.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
@@ -2021,11 +2048,11 @@ h4 {
 			margin: 0 0 70px 0;
 			h4 {
 				max-width: 760px;
-				margin: auto;
-				@include mobile{
+				margin: 0 auto 12px auto;
+				@include mobile {
 					text-align: left;
+					margin: 0 auto 7px auto;
 				}
-				
 			}
 		}
 		&:before,
@@ -2036,7 +2063,7 @@ h4 {
 		}
 		&:before {
 			height: 44px;
-			background: url("../img/pageItem/gaming/col-top-line.png");
+			background: url("../img/pageItem/gaming/colTopLine.png");
 			background-position: center;
 			background-repeat: no-repeat;
 			top: -5px;
@@ -2047,7 +2074,7 @@ h4 {
 		}
 		&:after {
 			height: 24px;
-			background: url("../img/pageItem/gaming/col-bottom-line.png");
+			background: url("../img/pageItem/gaming/colBottomLine.png");
 			background-position: center;
 			background-repeat: no-repeat;
 			bottom: -11px;
@@ -2104,7 +2131,7 @@ h4 {
 				top: 25px;
 			}
 			&::before {
-				background: url("../img/pageItem/nu-gift/left-deco-wide.png");
+				background: url("../img/pageItem/nuGift/leftDecoWide.png");
 				background-repeat: no-repeat;
 				background-size: contain;
 				left: 5%;
@@ -2113,7 +2140,7 @@ h4 {
 				}
 			}
 			&::after {
-				background: url("../img/pageItem/nu-gift/right-deco-wide.png");
+				background: url("../img/pageItem/nuGift/rightDecoWide.png");
 				background-repeat: no-repeat;
 				background-size: contain;
 				right: 5%;
@@ -2161,7 +2188,7 @@ h4 {
 				top: 20px;
 			}
 			&::before {
-				background: url("../img/pageItem/nu-gift/left-deco-narrow.png");
+				background: url("../img/pageItem/nuGift/leftDecoNarrow.png");
 				background-repeat: no-repeat;
 				background-size: contain;
 				left: 5%;
@@ -2170,7 +2197,7 @@ h4 {
 				}
 			}
 			&::after {
-				background: url("../img/pageItem/nu-gift/right-deco-narrow.png");
+				background: url("../img/pageItem/nuGift/rightDecoNarrow.png");
 				background-repeat: no-repeat;
 				background-size: contain;
 				right: 5%;
@@ -2181,6 +2208,7 @@ h4 {
 		}
 	}
 	.gift-btn {
+		cursor: pointer;
 		position: absolute;
 		bottom: -25px;
 		left: calc(50% - 90px);
@@ -2211,7 +2239,7 @@ h4 {
 				}
 			}
 			&::before {
-				background: url("../img/pageItem/nu-gift/left-deco-wide.png");
+				background: url("../img/pageItem/nuGift/leftDecoWide.png");
 				background-repeat: no-repeat;
 				background-size: contain;
 				left: calc(50% - 390px);
@@ -2220,7 +2248,7 @@ h4 {
 				}
 			}
 			&::after {
-				background: url("../img/pageItem/nu-gift/right-deco-wide.png");
+				background: url("../img/pageItem/nuGift/rightDecoWide.png");
 				background-repeat: no-repeat;
 				background-size: contain;
 				right: calc(50% - 390px);
@@ -2391,7 +2419,7 @@ h4 {
 	// 	-moz-radial-gradient(center top, #1d4272, #071625);
 	// background: url("../img/pageItem/bg/limit-bg.png"),
 	// 	radial-gradient(circle, #1d4272, #071625);
-	background: url("../img/pageItem/bg/limit-bg.jpg");
+	background: url("../img/pageItem/bg/limitBg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -2524,7 +2552,7 @@ h4 {
 
 // 尊榮禮遇
 .gaming-sec {
-	background: url("../img/pageItem/bg/gaming-bg.jpg");
+	background: url("../img/pageItem/bg/gamingBg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -2919,7 +2947,7 @@ footer {
 	}
 	&:before {
 		top: -3px;
-		background: url("../img/pageItem/modal/modal-top-alignc.png");
+		background: url("../img/pageItem/modal/modalTopAlignc.png");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 500px;
@@ -2930,7 +2958,7 @@ footer {
 	}
 	&:after {
 		bottom: -5px;
-		background: url("../img/pageItem/modal/modal-bottom-alignc.png");
+		background: url("../img/pageItem/modal/modalBottomAlignc.png");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 500px;
@@ -3040,6 +3068,8 @@ td {
 	position: fixed;
 	right: 5px;
 	bottom: 2%;
+	transition: all ease 0.4s;
+	cursor: pointer;
 	@include lgTablet {
 		bottom: calc(2% + 80px);
 	}
@@ -3078,15 +3108,15 @@ td {
 
 // additional slick slider arrow
 .slick-arrow.slick-disabled {
-	display: none!important;
+	display: none !important;
 }
 
-.fake-arrow{
-	@include size(28px,52px);
+.fake-arrow {
+	@include size(28px, 52px);
 	position: absolute;
 	display: block;
 	top: 50%;
-	transform: translate(0,-50%);
+	transform: translate(0, -50%);
 	outline: 0;
 	border: none;
 	z-index: 8;
@@ -3094,7 +3124,7 @@ td {
 	@include mobile {
 		@include size(20px, 37px);
 	}
-	&:before{
+	&:before {
 		position: absolute;
 		content: "";
 		top: 0;
@@ -3116,16 +3146,14 @@ td {
 	@include mobile {
 		right: -12px;
 	}
-	&:before{
-		background: url("../img/pageItem/hero-intro/rightArrow.png");
+	&:before {
+		background: url("../img/pageItem/heroIntro/rightArrow.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		left: unset;
 		right: 0;
 	}
 }
-
-
 
 .fake-arrow-prev {
 	// background-color: purple;
@@ -3134,11 +3162,10 @@ td {
 	@include mobile {
 		left: -12px;
 	}
-	&:before{
+	&:before {
 		left: 0;
-		background: url(../img/pageItem/hero-intro/leftArrow.png);
+		background: url(../img/pageItem/heroIntro/leftArrow.png);
 		background-size: contain;
-		background-repeat: no-repeat;		
+		background-repeat: no-repeat;
 	}
 }
-
