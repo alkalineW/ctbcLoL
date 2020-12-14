@@ -1,17 +1,49 @@
+// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/prepend()/prepend().md
+(function (arr) {
+	arr.forEach(function (item) {
+		if (item.hasOwnProperty("prepend")) {
+			return;
+		}
+		Object.defineProperty(item, "prepend", {
+			configurable: true,
+			enumerable: true,
+			writable: true,
+			value: function prepend() {
+				var argArr = Array.prototype.slice.call(arguments),
+					docFrag = document.createDocumentFragment();
+
+				argArr.forEach(function (argItem) {
+					var isNode = argItem instanceof Node;
+					docFrag.appendChild(
+						isNode
+							? argItem
+							: document.createTextNode(String(argItem))
+					);
+				});
+
+				this.insertBefore(docFrag, this.firstChild);
+			},
+		});
+	});
+})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
+
 // array for.. of loop
 // Array.of
 /*! https://mths.be/array-of v0.1.0 by @mathias */
 (function () {
-	'use strict';
+	"use strict";
 	var defineProperty = (function () {
 		// IE 8 only supports `Object.defineProperty` on DOM elements
 		try {
 			var object = {};
 			var $defineProperty = Object.defineProperty;
-			var result = $defineProperty(object, object, object) && $defineProperty;
-		} catch (error) { /**/ }
+			var result =
+				$defineProperty(object, object, object) && $defineProperty;
+		} catch (error) {
+			/**/
+		}
 		return result;
-	}());
+	})();
 	var isConstructor = function isConstructor(Constructor) {
 		try {
 			return !!new Constructor();
@@ -30,10 +62,10 @@
 			value = items[index];
 			if (defineProperty) {
 				defineProperty(result, index, {
-					'value': value,
-					'writable': true,
-					'enumerable': true,
-					'configurable': true
+					value: value,
+					writable: true,
+					enumerable: true,
+					configurable: true,
 				});
 			} else {
 				result[index] = value;
@@ -44,15 +76,15 @@
 		return result;
 	};
 	if (defineProperty) {
-		defineProperty(Array, 'of', {
-			'value': of,
-			'configurable': true,
-			'writable': true
+		defineProperty(Array, "of", {
+			value: of,
+			configurable: true,
+			writable: true,
 		});
 	} else {
 		Array.of = of;
 	}
-}());
+})();
 
 //- global variable
 var currentGenre = "hero"; // default showed hero-switcher & hero-slider
@@ -64,7 +96,7 @@ var cardSlider = document.querySelectorAll(".card-slider");
 
 //- function that show correspond roundSwitcher / cardSlider & slide to slide
 function showCorrespond(genre, slideNum, sliderBg) {
-	console.log(`showCorrespond ${genre} ${sliderBg} `);
+	console.log("showCorrespond " + genre + " " + sliderBg);
 	toggleShowedParts(roundSwitcher, genre, sliderBg);
 	toggleShowedParts(cardSlider, genre, sliderBg);
 	currentGenre = genre; // set currentGenre from parmeter
@@ -74,7 +106,6 @@ function showCorrespond(genre, slideNum, sliderBg) {
 		findCorrespondElm(elm, elm.dataset.genre, currentGenre, "active-genre");
 	});
 }
-
 
 //- prepend / append fake button & bind event to fake button
 cardSlider.forEach(function (elm, i) {
@@ -98,12 +129,13 @@ cardSlider.forEach(function (elm, i) {
 			showCorrespond("puro", 1, "debit6");
 		}
 	});
-	fakeArrowNext.classList.add("fake-arrow-next", "fake-arrow");
-	fakeArrowPrev.classList.add("fake-arrow-prev", "fake-arrow");
-	elm.append(fakeArrowNext);
+	fakeArrowNext.className += "fake-arrow-next fake-arrow";
+	fakeArrowPrev.className += "fake-arrow-prev fake-arrow";
+	// fakeArrowNext.classList.add("fake-arrow-next", "fake-arrow");
+	// fakeArrowPrev.classList.add("fake-arrow-prev", "fake-arrow");
+	elm.appendChild(fakeArrowNext);
 	elm.prepend(fakeArrowPrev);
 });
-
 
 //- hozcard switch to specific card intro
 function hozSlickTo() {
@@ -183,20 +215,20 @@ function changeBg(activeSlide) {
 	bgTargetElm.css({
 		backgroundPositionX: posX,
 	});
-	console.log(`change bg to :${activeSlide}`);
+	console.log("change bg to :" + activeSlide);
 }
 
 // changeSlideHandler bind to ".card-slider" itself
 // 從 this 出發找 active-slide 這樣抓 current-slide 的 id 換背景才不會有問題
 function changeSlideHandler() {
 	var activeSlideId;
-	console.log(currentGenre);
+	// console.log(currentGenre);
 	this.id.slice("-")[0] === currentGenre
 		? (activeSlideId = this.querySelector("#hero-intro-wrap .slick-active")
-			.id)
+				.id)
 		: (activeSlideId = document.querySelector(
-			"#" + currentGenre + "-slider .slick-active"
-		).id);
+				"#" + currentGenre + "-slider .slick-active"
+		  ).id);
 	$("#" + activeSlideId + " .hero-title-col").addClass("active");
 	changeBg(activeSlideId);
 	activeSwitcher(activeSlideId);
@@ -204,8 +236,8 @@ function changeSlideHandler() {
 
 function resetTitleStatus() {
 	var heroTitleCol = document.getElementsByClassName("hero-title-col");
-	for (let item of heroTitleCol) {
-		item.classList.remove("active");
+	for (var i; (l = heroTitleCol.length), i < l; i++) {
+		heroTitleCol[i].classList.remove("active");
 	}
 }
 
@@ -224,25 +256,28 @@ function toggleShowedParts(targetDom, invokeGenre, forceSlideId) {
 
 		// 如果項目的 id 與 傳入的 genre 相同,移除隱藏 class
 		if (genre === invokeGenre) {
-			console.log(`invokeGenre/${invokeGenre} genre/${genre} `);
+			console.log("invokeGenre/" + invokeGenre + " genre /" + genre);
 			currentGenre = invokeGenre; // 對當下的 currentGenre 賦予新值
 			eachElm.classList.remove("hide");
 
 			// 在 card-slider 元素中
 			if ($(eachElm).hasClass("card-slider")) {
 				if (!forceSlideId) {
+					console.log(eachElm);
+					console.log(eachElm.querySelector(".slick-active").id);
 					// 如果 forceId 為 false 就選取 card-slider 含有 .slick-active 的 id
-					currentSlideId = eachElm.childNodes[5].querySelector(
-						".slick-active"
-					).id;
+					currentSlideId = eachElm.querySelector(".slick-active").id;
 					console.log(
-						`forceSlideId: ${forceSlideId} / currentSlideId ${currentSlideId}`
+						"forceSlideId: " +
+							forceSlideId +
+							" /currentSlideId" +
+							currentSlideId
 					);
 					activeSwitcher(currentSlideId);
 					changeBg(currentSlideId);
 				} else {
 					currentSlideId = forceSlideId;
-					console.log(`forceSlideId:${currentSlideId}`);
+					// console.log("forceSlideId:" + currentSlideId);
 					activeSwitcher(currentSlideId);
 					changeBg(currentSlideId);
 				}
@@ -292,9 +327,9 @@ switcherItem.forEach(function (eachItem) {
 		var slideGenre = $(this).parent().parent().attr("id").split("-")[0];
 		var currentSlide = $(this).index();
 
-		console.log(`${slideGenre}  ${currentSlide}`);
+		// console.log(slideGenre + " " + currentSlide);
 		if ($(this).hasClass("active")) {
-			console.log("already has active class");
+			// console.log("already has active class");
 			return;
 		} else {
 			$(this).siblings().removeClass("active");
@@ -308,13 +343,13 @@ switcherItem.forEach(function (eachItem) {
 				currentSlide - 1
 			);
 		} else if (slideGenre != "hero" && currentSlide >= 2) {
-			console.log(`switcherItem: ${slideGenre}`);
+			// console.log("switcherItem: " + slideGenre);
 			$("#" + slideGenre + "-slider").slick(
 				"slickGoTo",
 				currentSlide - 1
 			);
 		} else {
-			console.log(`switcherItem: ${slideGenre}`);
+			// console.log("switcherItem: " + slideGenre);
 			$("#" + slideGenre + "-slider").slick("slickGoTo", currentSlide);
 		}
 	});

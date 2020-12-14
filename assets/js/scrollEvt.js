@@ -146,7 +146,7 @@ window.onload = function () {
 			if (
 				MathFloor(triggerElementData.top) < 0 &&
 				Math.abs(triggerElementData.top) >=
-				MathFloor(triggerElementData.height)
+					MathFloor(triggerElementData.height)
 			) {
 				targetElement.forEach(function (e) {
 					rmClass(e, "active");
@@ -170,7 +170,7 @@ window.onload = function () {
 			if (
 				MathFloor(triggerElementData.top) < 0 &&
 				Math.abs(triggerElementData.top) >=
-				MathFloor(triggerElementData.height)
+					MathFloor(triggerElementData.height)
 			) {
 				targetElement.classList.remove("active");
 			}
@@ -264,7 +264,7 @@ window.onload = function () {
 			}
 		}
 	});
-	backToTop.forEach((elm) => {
+	backToTop.forEach(function (elm) {
 		elm.addEventListener("click", function () {
 			$("html , body").animate({ scrollTop: 0 }, "slow");
 		});
