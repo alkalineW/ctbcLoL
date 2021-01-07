@@ -1,38 +1,38 @@
 // color scheme
 $theme-color: (
-	"wh": #fff,
-	"footerG": #e5e5e4,
-	"lightGolden": #ebbe7e,
-	"golden": #ccaf75,
-	"golden1": #c0a05b,
-	"modalGold": #d7a34e,
-	"darkB": #0c151e,
-	"lightB": #bbd8de,
-	"bk": #222,
-	"neonB": #2fd2fd,
+  "wh": #fff,
+  "footerG": #e5e5e4,
+  "lightGolden": #ebbe7e,
+  "golden": #ccaf75,
+  "golden1": #c0a05b,
+  "modalGold": #d7a34e,
+  "darkB": #0c151e,
+  "lightB": #bbd8de,
+  "bk": #222,
+  "neonB": #2fd2fd,
 );
 
 @mixin flexC {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin size($w, $h) {
-	width: $w;
-	height: $h;
+  width: $w;
+  height: $h;
 }
 
 @mixin poa($t, $l) {
-	top: $t;
-	left: $l;
-	position: absolute;
+  top: $t;
+  left: $l;
+  position: absolute;
 }
 
 @mixin pseudo($p, $bgc) {
-	content: "";
-	position: $p;
-	background-color: $bgc;
+  content: "";
+  position: $p;
+  background-color: $bgc;
 }
 
 // rwd mixins
@@ -49,3123 +49,3116 @@ $smMobile: 375px;
 $xsMobile: 360px;
 
 @mixin xlDesktop {
-	@media (max-width:#{$xlDesktop}) {
-		@content;
-	}
+  @media (max-width:#{$xlDesktop}) {
+    @content;
+  }
 }
 
 @mixin semiLgDesktop {
-	@media (max-width:#{$semiLgDesktop}) {
-		@content;
-	}
+  @media (max-width:#{$semiLgDesktop}) {
+    @content;
+  }
 }
 
 @mixin lgDesktop {
-	@media (max-width:#{$lgDesktop}) {
-		@content;
-	}
+  @media (max-width:#{$lgDesktop}) {
+    @content;
+  }
 }
 
 @mixin mdDesktop {
-	@media (max-width:#{$mdDesktop}) {
-		@content;
-	}
+  @media (max-width:#{$mdDesktop}) {
+    @content;
+  }
 }
 
 @mixin smDesktop {
-	@media (max-width:#{$smDesktop}) {
-		@content;
-	}
+  @media (max-width:#{$smDesktop}) {
+    @content;
+  }
 }
 
 @mixin lgTablet {
-	@media (max-width:#{$lgTablet}) {
-		@content;
-	}
+  @media (max-width:#{$lgTablet}) {
+    @content;
+  }
 }
 
 @mixin tablet {
-	@media (max-width:#{$tablet}) {
-		@content;
-	}
+  @media (max-width:#{$tablet}) {
+    @content;
+  }
 }
 
 @mixin mobile {
-	@media (max-width:#{$mobile}) {
-		@content;
-	}
+  @media (max-width:#{$mobile}) {
+    @content;
+  }
 }
 
 @mixin mdMobile {
-	@media (max-width:#{$mdMobile}) {
-		@content;
-	}
+  @media (max-width:#{$mdMobile}) {
+    @content;
+  }
 }
 
 @mixin smMobile {
-	@media (max-width:#{$smMobile}) {
-		@content;
-	}
+  @media (max-width:#{$smMobile}) {
+    @content;
+  }
 }
 
 @mixin xsMobile {
-	@media (max-width:#{$xsMobile}) {
-		@content;
-	}
+  @media (max-width:#{$xsMobile}) {
+    @content;
+  }
 }
 
 // animation mixins
 @mixin keyframes($animation-name) {
-	@-webkit-keyframes #{$animation-name} {
-		@content;
-	}
-	@-moz-keyframes #{$animation-name} {
-		@content;
-	}
-	@-ms-keyframes #{$animation-name} {
-		@content;
-	}
-	@-o-keyframes #{$animation-name} {
-		@content;
-	}
-	@keyframes #{$animation-name} {
-		@content;
-	}
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
 }
 
 @mixin animation($str) {
-	-webkit-animation: #{$str};
-	-moz-animation: #{$str};
-	-ms-animation: #{$str};
-	-o-animation: #{$str};
-	animation: #{$str};
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
 }
 
 // animation effect
 @include keyframes(flashBg) {
-	0% {
-		opacity: 0;
-	}
-	49% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	51% {
-		opacity: 0;
-	}
-	69% {
-		opacity: 0;
-	}
-	70% {
-		opacity: 0.5;
-	}
-	71% {
-		opacity: 0;
-	}
-	79% {
-		opacity: 0;
-	}
-	80% {
-		opacity: 0.2;
-	}
-	81% {
-		opacity: 0;
-	}
-	85% {
-		opacity: 0;
-	}
-	86% {
-		opacity: 0.1;
-	}
-	87% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  69% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  71% {
+    opacity: 0;
+  }
+  79% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  81% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0.1;
+  }
+  87% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 // color-switch
 @include keyframes(leftLine) {
-	0% {
-		width: 0;
-		background-color: #7a6946;
-	}
-	100% {
-		width: calc(50% - 88px);
-		background-color: map-get($theme-color, "golden");
-	}
+  0% {
+    width: 0;
+    background-color: #7a6946;
+  }
+  100% {
+    width: calc(50% - 88px);
+    background-color: map-get($theme-color, "golden");
+  }
 }
 
 @include keyframes(rightLine) {
-	0% {
-		left: calc(50% + 88px);
-		width: 0;
-		background-color: #7a6946;
-	}
+  0% {
+    left: calc(50% + 88px);
+    width: 0;
+    background-color: #7a6946;
+  }
 
-	100% {
-		left: calc(50% + 88px);
-		width: calc(50% - 88px);
-		background-color: map-get($theme-color, "golden");
-	}
+  100% {
+    left: calc(50% + 88px);
+    width: calc(50% - 88px);
+    background-color: map-get($theme-color, "golden");
+  }
 }
 
 // non-forward 要再改
 @include keyframes(powerUpInfinite) {
-	0% {
-		bottom: -111px;
-	}
-	100% {
-		bottom: 37px;
-	}
+  0% {
+    bottom: -111px;
+  }
+  100% {
+    bottom: 37px;
+  }
 }
 
 // spinning
 @include keyframes(spin) {
-	30% {
-		transform: rotate(-120deg);
-	}
-	50% {
-		transform: rotate(-180deg);
-	}
+  30% {
+    transform: rotate(-120deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
 }
 
 // spinReverse
 @include keyframes(spinReverse) {
-	30% {
-		transform: rotate(120deg);
-	}
-	50% {
-		transform: rotate(180deg);
-	}
+  30% {
+    transform: rotate(120deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
 }
 
 @include keyframes(arrowOpacity) {
-	30% {
-		opacity: 1;
-	}
-	50% {
-		opacity: 0.4;
-	}
-	70% {
-		opacity: 1;
-	}
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 1;
+  }
 }
 
 @include keyframes(flowerEffect1) {
-	0% {
-		transform-origin: 50%;
-		opacity: 0;
-		transform: translate(35px, -30px);
-	}
-	20% {
-		opacity: 1;
-	}
-	30% {
-		opacity: 0.1;
-	}
-	40% {
-		opacity: 0;
-		transform: translate(-30px, 45px);
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    transform-origin: 50%;
+    opacity: 0;
+    transform: translate(35px, -30px);
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0;
+    transform: translate(-30px, 45px);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @include keyframes(flowerEffect2) {
-	0% {
-		transform-origin: 50%;
-		opacity: 0;
-		transform: translate(30px, -40px);
-	}
-	30% {
-		opacity: 1;
-	}
-	50% {
-		opacity: 0.1;
-	}
-	60% {
-		opacity: 0;
-		transform: translate(-25px, 40px);
-	}
-	100% {
-		opacity: 0;
-		transform: translate(0px, 0px);
-	}
+  0% {
+    transform-origin: 50%;
+    opacity: 0;
+    transform: translate(30px, -40px);
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0;
+    transform: translate(-25px, 40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, 0px);
+  }
 }
 
 @include keyframes(flowerEffect3) {
-	0% {
-		opacity: 0;
-		transform: translate(18px, -16px);
-	}
-	50% {
-		opacity: 1;
-	}
-	55% {
-		opacity: 0.1;
-	}
-	70% {
-		opacity: 0;
-		transform: translate(-30px, 20px);
-	}
-	100% {
-		opacity: 0;
-		transform: translate(0px, 0px);
-	}
+  0% {
+    opacity: 0;
+    transform: translate(18px, -16px);
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0;
+    transform: translate(-30px, 20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, 0px);
+  }
 }
 
 @include keyframes(glowEffect) {
-	0% {
-		opacity: 0;
-		transform: translate(18px, -16px);
-	}
-	50% {
-		opacity: 0.3;
-	}
-	70% {
-		opacity: 0;
-		transform: translate(-130px, 150px);
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+    transform: translate(18px, -16px);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0;
+    transform: translate(-130px, 150px);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @include keyframes(axisYmovingHard) {
-	50% {
-		transform: translateY(-10px);
-	}
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @include keyframes(axisYmoving) {
-	50% {
-		transform: translateY(-5px);
-	}
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 @include keyframes(axisYmovingHarsh) {
-	50% {
-		transform: translateY(-25px);
-	}
+  50% {
+    transform: translateY(-25px);
+  }
 }
 
 @include keyframes(scaling) {
-	0% {
-		transform: scale(1);
-	}
-	40% {
-		transform: scale(1.05);
-	}
-	60% {
-		transform: scale(1.05);
-	}
-	100% {
-		transform: scale(1);
-	}
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @include keyframes(scaleNfade) {
-	0% {
-		opacity: 0;
-		transform: scale(0.98);
-	}
-	30% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 0;
-		transform: scale(1);
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @include keyframes(scaleNfade2) {
-	0% {
-		opacity: 0;
-		transform: scale(0.95);
-	}
-	50% {
-		opacity: 1;
-	}
-	60% {
-		opacity: 0;
-		transform: scale(1);
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @include keyframes(fadeInOut) {
-	50% {
-		opacity: 0;
-	}
+  50% {
+    opacity: 0;
+  }
 }
 // fadeComplexOp
 @include keyframes(fadeComplexOp) {
-	5% {
-		opacity: 0;
-	}
-	20% {
-		opacity: 0.8;
-	}
-	50% {
-		opacity: 0;
-	}
-	70% {
-		opacity: 0.8;
-	}
+  5% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.8;
+  }
 }
 
 @include keyframes(fadeComplex) {
-	5% {
-		opacity: 0;
-	}
-	20% {
-		opacity: 1;
-	}
-	50% {
-		opacity: 0;
-	}
-	70% {
-		opacity: 1;
-	}
+  5% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
 }
 
 @include keyframes(circleRotate) {
-	0% {
-		transform: rotate(0deg);
-	}
-	40% {
-		transform: rotate(360deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @include keyframes(flickers) {
-	0% {
-		left: -100%;
-		opacity: 1;
-	}
-	80% {
-		left: 100%;
-		opacity: 1;
-	}
-	to {
-		left: 100%;
-		opacity: 1;
-	}
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  80% {
+    left: 100%;
+    opacity: 1;
+  }
+  to {
+    left: 100%;
+    opacity: 1;
+  }
 }
 
 // prevent white-area on rightSide
 html,
 body {
-	overflow-x: hidden;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-		Helvetica, Arial, "微軟正黑體", "蘋果儷黑體", "新細明體", Verdana,
-		sans-serif;
-	font-size: 18px;
-	@include tablet {
-		font-size: 15px;
-	}
+  overflow-x: hidden;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "微軟正黑體", "蘋果儷黑體", "新細明體", Verdana,
+    sans-serif;
+  font-size: 18px;
+  @include tablet {
+    font-size: 15px;
+  }
 }
 
 body {
-	background-color: map-get($theme-color, "darkB");
+  background-color: map-get($theme-color, "darkB");
 }
 
 * {
-	box-sizing: border-box;
-	img {
-		max-width: 100%;
-		&:focus {
-			border: none;
-			outline: none;
-		}
-	}
+  box-sizing: border-box;
+  img {
+    max-width: 100%;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
 }
 
 // navbar
 .navbar-wrap {
-	background-color: map-get($theme-color, "darkB");
-	width: 100%;
-	position: fixed;
-	z-index: 20;
+  background-color: map-get($theme-color, "darkB");
+  width: 100%;
+  position: fixed;
+  z-index: 20;
 }
 .navbar {
-	position: relative;
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 0;
-	// 當縮合的時候調整 flex 的 behave
-	@include smDesktop {
-		justify-content: unset;
-	}
-	.navbar-brand {
-		padding: 11px 0;
-		position: relative;
-		cursor: pointer;
-		// ctbc logo
-		&:first-of-type {
-			width: 135px;
-			margin: 0 20px 0 0;
-			@include lgDesktop {
-				margin: 0 20px 0 15px;
-			}
-			@include mobile {
-				width: auto;
-			}
-			&:after {
-				@include pseudo(absolute, #4d3f2f);
-				width: 2px;
-				height: 70%;
-				top: 15%;
-				right: -20px;
-			}
-		}
-		// lol logo
-		&:last-of-type {
-			width: 84px;
-			margin: 0 0 0 20px;
-			@include smDesktop {
-				flex: 1;
-			}
-		}
-		img {
-			@include smDesktop {
-				max-height: 36px;
-			}
-			@include mobile {
-				max-height: 26px;
-			}
-		}
-	}
-	// 專屬上方選單的
-	.nav-item {
-		cursor: pointer;
-		.nav-link {
-			padding: 16px 35px;
-			@include mdDesktop {
-				padding: 16px 22px;
-			}
-			@include smDesktop {
-				text-align: center;
-			}
-		}
-	}
-	.nav-dropdown {
-		margin: 0;
-		padding: 0;
-		background-color: rgb(242, 226, 131);
-		border-radius: 0 0 2px 2px;
-		background: linear-gradient(
-			180deg,
-			rgba(242, 226, 131, 1) 0%,
-			rgba(163, 126, 35, 1) 81%,
-			rgba(163, 126, 35, 1) 100%
-		);
-		a {
-			padding: 16px 35px;
-			color: map-get($theme-color, "darkB");
-			&:hover {
-				background-color: transparent;
-			}
-			&:first-of-type {
-				border-bottom: 1px solid map-get($theme-color, "darkB");
-			}
-		}
-	}
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  // 當縮合的時候調整 flex 的 behave
+  @include smDesktop {
+    justify-content: unset;
+  }
+  .navbar-brand {
+    padding: 11px 0;
+    position: relative;
+    cursor: pointer;
+    // ctbc logo
+    &:first-of-type {
+      width: 135px;
+      margin: 0 20px 0 0;
+      @include lgDesktop {
+        margin: 0 20px 0 15px;
+      }
+      @include mobile {
+        width: auto;
+      }
+      &:after {
+        @include pseudo(absolute, #4d3f2f);
+        width: 2px;
+        height: 70%;
+        top: 15%;
+        right: -20px;
+      }
+    }
+    // lol logo
+    &:last-of-type {
+      width: 84px;
+      margin: 0 0 0 20px;
+      @include smDesktop {
+        flex: 1;
+      }
+    }
+    img {
+      @include smDesktop {
+        max-height: 36px;
+      }
+      @include mobile {
+        max-height: 26px;
+      }
+    }
+  }
+  // 專屬上方選單的
+  .nav-item {
+    cursor: pointer;
+    .nav-link {
+      padding: 16px 35px;
+      @include mdDesktop {
+        padding: 16px 22px;
+      }
+      @include smDesktop {
+        text-align: center;
+      }
+    }
+  }
+  .nav-dropdown {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(242, 226, 131);
+    border-radius: 0 0 2px 2px;
+    background: linear-gradient(
+      180deg,
+      rgba(242, 226, 131, 1) 0%,
+      rgba(163, 126, 35, 1) 81%,
+      rgba(163, 126, 35, 1) 100%
+    );
+    a {
+      padding: 16px 35px;
+      color: map-get($theme-color, "darkB");
+      &:hover {
+        background-color: transparent;
+      }
+      &:first-of-type {
+        border-bottom: 1px solid map-get($theme-color, "darkB");
+      }
+    }
+  }
 
-	.navbar-toggler {
-		@include size(48px, 48px);
-	}
-	.navbar-toggler-icon {
-		color: map-get($theme-color, "golden");
-	}
+  .navbar-toggler {
+    @include size(48px, 48px);
+  }
+  .navbar-toggler-icon {
+    color: map-get($theme-color, "golden");
+  }
 }
 
 // 選單樣式 共用
 .nav-item.active,
 .nav-item:not(:last-of-type):hover {
-	.nav-link {
-		color: #6eeefe;
-		text-shadow: 0 0 2px #6ea6fe;
-	}
-	&:after {
-		@include pseudo(absolute, transparent);
-		height: 20px;
-		background: url(../img/pageItem/listitemActive.png);
-		bottom: 0;
-		width: 100%;
-		background-position: bottom;
-		background-size: contain;
-		background-repeat: no-repeat;
-		z-index: 2;
-	}
+  .nav-link {
+    color: #6eeefe;
+    text-shadow: 0 0 2px #6ea6fe;
+  }
+  &:after {
+    @include pseudo(absolute, transparent);
+    height: 20px;
+    background: url(../img/pageItem/listitemActive.png);
+    bottom: 0;
+    width: 100%;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
 }
 
 .nav-item {
-	position: relative;
-	// 立即申辦
-	&:last-of-type {
-		background-color: rgb(242, 226, 131);
-		background: linear-gradient(
-			180deg,
-			rgba(242, 226, 131, 1) 0%,
-			rgba(163, 126, 35, 1) 81%,
-			rgba(163, 126, 35, 1) 100%
-		);
-		.nav-link {
-			color: map-get($theme-color, "darkB");
-		}
-	}
-	.nav-link {
-		color: map-get($theme-color, "lightB");
-		transition: all ease 0.2s;
-		cursor: pointer;
-	}
+  position: relative;
+  // 立即申辦
+  &:last-of-type {
+    background-color: rgb(242, 226, 131);
+    background: linear-gradient(
+      180deg,
+      rgba(242, 226, 131, 1) 0%,
+      rgba(163, 126, 35, 1) 81%,
+      rgba(163, 126, 35, 1) 100%
+    );
+    .nav-link {
+      color: map-get($theme-color, "darkB");
+    }
+  }
+  .nav-link {
+    color: map-get($theme-color, "lightB");
+    transition: all ease 0.2s;
+    cursor: pointer;
+  }
 }
 
 // animate navbar-toggler-icon
 #navbar-menu-icon {
-	position: relative;
-	display: block;
-	@include size(22px, 14px);
-	top: -1px;
-	left: -1px;
+  position: relative;
+  display: block;
+  @include size(22px, 14px);
+  top: -1px;
+  left: -1px;
 
-	.navbar-icon-bar {
-		position: absolute;
-		background-color: map-get($theme-color, "golden");
-		display: inline-block;
-		@include size(20px, 1px);
-		margin: auto;
-		transition: all 0.3s linear;
-		left: 0;
-		&:first-of-type {
-			top: 0;
-		}
-		&:nth-of-type(2) {
-			top: 7px;
-		}
-		&:last-of-type {
-			top: 100%;
-		}
-	}
+  .navbar-icon-bar {
+    position: absolute;
+    background-color: map-get($theme-color, "golden");
+    display: inline-block;
+    @include size(20px, 1px);
+    margin: auto;
+    transition: all 0.3s linear;
+    left: 0;
+    &:first-of-type {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: 7px;
+    }
+    &:last-of-type {
+      top: 100%;
+    }
+  }
 
-	.navbar-icon-bar.open {
-		&:first-of-type {
-			transform: rotate(45deg);
-			top: 50%;
-		}
-		&:nth-of-type(2) {
-			opacity: 0;
-		}
-		&:last-of-type {
-			transform: rotate(-45deg);
-			top: 50%;
-		}
-	}
+  .navbar-icon-bar.open {
+    &:first-of-type {
+      transform: rotate(45deg);
+      top: 50%;
+    }
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+    &:last-of-type {
+      transform: rotate(-45deg);
+      top: 50%;
+    }
+  }
 }
 
 .logo {
-	position: relative;
-	@include mdDesktop {
-	}
-	@include mobile {
-	}
+  position: relative;
+  @include mdDesktop {
+  }
+  @include mobile {
+  }
 }
 
 // page font & title
 h1 {
-	font-size: 38px;
-	@include tablet {
-		font-size: 34px;
-	}
-	@include mobile {
-		font-size: 30px;
-	}
+  font-size: 38px;
+  @include tablet {
+    font-size: 34px;
+  }
+  @include mobile {
+    font-size: 30px;
+  }
 }
 h2 {
-	font-size: 34px;
-	@include tablet {
-		font-size: 30px;
-	}
-	@include mobile {
-		font-size: 26px;
-	}
+  font-size: 34px;
+  @include tablet {
+    font-size: 30px;
+  }
+  @include mobile {
+    font-size: 26px;
+  }
 }
 h3 {
-	font-size: 28px;
-	@include tablet {
-		font-size: 24px;
-	}
-	@include mobile {
-		font-size: 20px;
-	}
+  font-size: 28px;
+  @include tablet {
+    font-size: 24px;
+  }
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 h4 {
-	font-size: 24px;
-	line-height: 1.5em;
-	@include tablet {
-		font-size: 20px;
-	}
-	@include mobile {
-		font-size: 18px;
-	}
+  font-size: 24px;
+  line-height: 1.5em;
+  @include tablet {
+    font-size: 20px;
+  }
+  @include mobile {
+    font-size: 18px;
+  }
 }
 
 // kv part
 .kv-section {
-	background: url("../img/pageItem/bg/kvBg.jpg") no-repeat center top;
-	padding: 60px 0 100px 0;
-	position: relative;
-	@include tablet {
-		background: url("../img/pageItem/bg/kvBgTab.jpg") no-repeat center top;
-		background-size: cover;
-	}
-	@include mobile {
-		background: url("../img/pageItem/bg/kvBgMobileNu.jpg") no-repeat center
-			top;
-		background-size: cover;
-		padding: 50px 0 70px 0;
-	}
-	// &:before {
-	//   content: "";
-	//   position: absolute;
-	//   width: 100%;
-	//   height: 93%;
-	//   left: 0;
-	//   opacity: 0.2;
-	//   animation: flickers 3s infinite;
-	//   background: -moz-linear-gradient(
-	//     -90deg,
-	//     rgba(255, 255, 255, 0) 0%,
-	//     rgba(255, 255, 255, 0.1) 15%,
-	//     rgba(255, 255, 255, 0.6) 40%,
-	//     rgba(255, 255, 255, 0.8) 60%,
-	//     rgba(255, 255, 255, 0.1) 85%,
-	//     rgba(255, 255, 255, 0) 100%
-	//   );
-	//   background: -webkit-linear-gradient(
-	//     -90deg,
-	//     rgba(255, 255, 255, 0) 0%,
-	//     rgba(255, 255, 255, 0.1) 15%,
-	//     rgba(255, 255, 255, 0.6) 40%,
-	//     rgba(255, 255, 255, 0.8) 60%,
-	//     rgba(255, 255, 255, 0.1) 85%,
-	//     rgba(255, 255, 255, 0) 100%
-	//   );
-	//   background: linear-gradient(
-	//     90deg,
-	//     rgba(255, 255, 255, 0) 0%,
-	//     rgba(255, 255, 255, 0.1) 15%,
-	//     rgba(255, 255, 255, 0.6) 40%,
-	//     rgba(255, 255, 255, 0.8) 60%,
-	//     rgba(255, 255, 255, 0.1) 85%,
-	//     rgba(255, 255, 255, 0) 100%
-	//   );
-	// }
-	.myway {
-		position: absolute;
-		right: 19px;
-		top: 70px;
-		@include xlDesktop {
-			width: 150px;
-		}
-		@include smDesktop {
-			left: 10px;
-			top: unset;
-			bottom: 10px;
-		}
-		@include mobile {
-			width: 85px;
-			bottom: calc(30% + 8px);
-		}
-	}
-	.bg-flash-effect {
-		position: absolute;
-		top: 0;
-		opacity: 0;
-		animation: flashBg 10s infinite;
-		width: 100%;
-		left: 0;
-		@include smDesktop {
-			max-width: unset;
-		}
-		@include tablet {
-			width: 200%;
-			left: -50%;
-		}
-	}
-	.kv-slogan-wrap {
-		position: relative;
-		width: 100%;
-		padding: 0;
-		max-width: 760px;
-		left: calc(50% - 380px);
-		z-index: 6;
-		margin: -15px 0 0 0;
-		// masking for flicker effect
-		-webkit-mask: url("../img/pageItem/kv/kvSloganMask.png") no-repeat
-			center top;
-		mask: url("../img/pageItem/kv/kvSloganMask.png") no-repeat center top;
-		-webkit-mask-size: contain;
-		mask-size: contain;
-		height: 220px;
-		background-image: url("../img/pageItem/kv/kvSloganBright.png");
-		background-size: contain;
-		background-repeat: no-repeat;
-		@include xlDesktop {
-			max-width: 670px;
-			left: calc(50% - 335px);
-		}
-		@include lgTablet {
-			margin: 0;
-			width: 90%;
-			left: 5%;
-		}
-		@include mobile {
-			padding: 20px 0 0 0;
-			max-width: 315px;
-			margin: auto;
-			height: 95px;
-			left: 0;
-		}
-		&:after {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			content: "";
-			left: 0;
-			top: 0;
-			opacity: 1;
-			opacity: 1;
-			-webkit-animation: flickers 3s;
-			animation: flickers 3s;
-			transition-delay: 2s;
-			-webkit-transition-delay: 2s;
-			-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-			background: -moz-linear-gradient(
-				-25deg,
-				rgba(255, 255, 255, 0) 0%,
-				rgba(255, 255, 255, 0.1) 15%,
-				rgba(255, 255, 255, 0.6) 40%,
-				rgba(255, 255, 255, 0.8) 60%,
-				rgba(255, 255, 255, 0.1) 85%,
-				rgba(255, 255, 255, 0) 100%
-			);
-			background: -webkit-linear-gradient(
-				-25deg,
-				rgba(255, 255, 255, 0) 0%,
-				rgba(255, 255, 255, 0.1) 15%,
-				rgba(255, 255, 255, 0.6) 40%,
-				rgba(255, 255, 255, 0.8) 60%,
-				rgba(255, 255, 255, 0.1) 85%,
-				rgba(255, 255, 255, 0) 100%
-			);
-			background: linear-gradient(
-				115deg,
-				rgba(255, 255, 255, 0) 0%,
-				rgba(255, 255, 255, 0.1) 15%,
-				rgba(255, 255, 255, 0.6) 40%,
-				rgba(255, 255, 255, 0.8) 60%,
-				rgba(255, 255, 255, 0.1) 85%,
-				rgba(255, 255, 255, 0) 100%
-			);
-		}
-	}
+  background: url("../img/pageItem/bg/kvBg.jpg") no-repeat center top;
+  padding: 60px 0 100px 0;
+  position: relative;
+  @include tablet {
+    background: url("../img/pageItem/bg/kvBgTab.jpg") no-repeat center top;
+    background-size: cover;
+  }
+  @include mobile {
+    background: url("../img/pageItem/bg/kvBgMobileNu.jpg") no-repeat center top;
+    background-size: cover;
+    padding: 50px 0 70px 0;
+  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 93%;
+  //   left: 0;
+  //   opacity: 0.2;
+  //   animation: flickers 3s infinite;
+  //   background: -moz-linear-gradient(
+  //     -90deg,
+  //     rgba(255, 255, 255, 0) 0%,
+  //     rgba(255, 255, 255, 0.1) 15%,
+  //     rgba(255, 255, 255, 0.6) 40%,
+  //     rgba(255, 255, 255, 0.8) 60%,
+  //     rgba(255, 255, 255, 0.1) 85%,
+  //     rgba(255, 255, 255, 0) 100%
+  //   );
+  //   background: -webkit-linear-gradient(
+  //     -90deg,
+  //     rgba(255, 255, 255, 0) 0%,
+  //     rgba(255, 255, 255, 0.1) 15%,
+  //     rgba(255, 255, 255, 0.6) 40%,
+  //     rgba(255, 255, 255, 0.8) 60%,
+  //     rgba(255, 255, 255, 0.1) 85%,
+  //     rgba(255, 255, 255, 0) 100%
+  //   );
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba(255, 255, 255, 0) 0%,
+  //     rgba(255, 255, 255, 0.1) 15%,
+  //     rgba(255, 255, 255, 0.6) 40%,
+  //     rgba(255, 255, 255, 0.8) 60%,
+  //     rgba(255, 255, 255, 0.1) 85%,
+  //     rgba(255, 255, 255, 0) 100%
+  //   );
+  // }
+  .myway {
+    position: absolute;
+    right: 19px;
+    top: 70px;
+    @include xlDesktop {
+      width: 150px;
+    }
+    @include smDesktop {
+      left: 10px;
+      top: unset;
+      bottom: 10px;
+    }
+    @include mobile {
+      width: 85px;
+      bottom: calc(30% + 8px);
+    }
+  }
+  .bg-flash-effect {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    animation: flashBg 10s infinite;
+    width: 100%;
+    left: 0;
+    @include smDesktop {
+      max-width: unset;
+    }
+    @include tablet {
+      width: 200%;
+      left: -50%;
+    }
+  }
+  .kv-slogan-wrap {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    max-width: 760px;
+    left: calc(50% - 380px);
+    z-index: 6;
+    margin: -15px 0 0 0;
+    // masking for flicker effect
+    -webkit-mask: url("../img/pageItem/kv/kvSloganMask.png") no-repeat center
+      top;
+    mask: url("../img/pageItem/kv/kvSloganMask.png") no-repeat center top;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    height: 220px;
+    background-image: url("../img/pageItem/kv/kvSloganBright.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include xlDesktop {
+      max-width: 670px;
+      left: calc(50% - 335px);
+    }
+    @include lgTablet {
+      margin: 0;
+      width: 90%;
+      left: 5%;
+    }
+    @include mobile {
+      padding: 20px 0 0 0;
+      max-width: 315px;
+      margin: auto;
+      height: 95px;
+      left: 0;
+    }
+    &:after {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      opacity: 1;
+      opacity: 1;
+      -webkit-animation: flickers 3s;
+      animation: flickers 3s;
+      transition-delay: 2s;
+      -webkit-transition-delay: 2s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      background: -moz-linear-gradient(
+        -25deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 15%,
+        rgba(255, 255, 255, 0.6) 40%,
+        rgba(255, 255, 255, 0.8) 60%,
+        rgba(255, 255, 255, 0.1) 85%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background: -webkit-linear-gradient(
+        -25deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 15%,
+        rgba(255, 255, 255, 0.6) 40%,
+        rgba(255, 255, 255, 0.8) 60%,
+        rgba(255, 255, 255, 0.1) 85%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background: linear-gradient(
+        115deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 15%,
+        rgba(255, 255, 255, 0.6) 40%,
+        rgba(255, 255, 255, 0.8) 60%,
+        rgba(255, 255, 255, 0.1) 85%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
 
-	.kv-wrap {
-		position: relative;
-		width: 100%;
-		max-width: 1680px;
-		min-height: 755px;
-		margin: -190px auto 0 auto;
-		@include xlDesktop {
-			min-height: 680px;
-		}
-		@include semiLgDesktop {
-			min-height: 640px;
-		}
-		@include lgDesktop {
-			min-height: 600px;
-		}
-		@include smDesktop {
-			min-height: 880px;
-			margin: -160px auto 0 auto;
-		}
-		@include tablet {
-			min-height: 760px;
-		}
-		@include mobile {
-			min-height: 660px;
-			max-width: 480px;
-			margin: -20% auto 0 auto;
-		}
-		@include mdMobile {
-			min-height: 560px;
-		}
+  .kv-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1680px;
+    min-height: 755px;
+    margin: -190px auto 0 auto;
+    @include xlDesktop {
+      min-height: 680px;
+    }
+    @include semiLgDesktop {
+      min-height: 640px;
+    }
+    @include lgDesktop {
+      min-height: 600px;
+    }
+    @include smDesktop {
+      min-height: 880px;
+      margin: -160px auto 0 auto;
+    }
+    @include tablet {
+      min-height: 760px;
+    }
+    @include mobile {
+      min-height: 660px;
+      max-width: 480px;
+      margin: -20% auto 0 auto;
+    }
+    @include mdMobile {
+      min-height: 560px;
+    }
 
-		.character-wrap {
-			position: absolute;
-			height: 100%;
-			transition: 0.2s all ease-in;
-			// ezreal
-			&:first-of-type {
-				width: 50%;
-				max-width: 850px;
-				left: 8%;
-				@include xlDesktop {
-					left: 4%;
-				}
-				@include semiLgDesktop {
-					left: 8%;
-				}
-				@include smDesktop {
-					width: 80%;
-					max-height: 55%;
-				}
-				@include mobile {
-					width: 90%;
-					left: -25px;
-				}
-				.ch-bg {
-					@include mobile {
-						max-width: 70%;
-					}
-					&:nth-of-type(2) {
-						left: -5px;
-						@include tablet {
-							max-width: 150px;
-						}
-					}
-					&:nth-of-type(3) {
-						right: 0;
-						@include smDesktop {
-							max-width: 300px;
-						}
-						@include tablet {
-							max-width: 210px;
-						}
-						@include mobile {
-							max-width: 170px;
-							right: -40px;
-						}
-					}
-					&:nth-of-type(4) {
-						bottom: 0;
-						left: 10%;
-						animation: axisYmovingHard 6s infinite ease-in-out;
-						@include semiLgDesktop {
-							left: 7%;
-						}
-						@include smDesktop {
-							max-width: 200px;
-							left: 0%;
-						}
-					}
-				}
-				.ch {
-					width: 80%;
-					top: 24%;
-					left: 15%;
-					animation: axisYmovingHarsh 8s infinite ease-in-out;
-					z-index: 2;
-					@include xlDesktop {
-						width: 78%;
-					}
-					@include lgDesktop {
-						top: 27%;
-						left: 18%;
-					}
-					@include mdDesktop {
-						top: 33%;
-					}
-					@include smDesktop {
-						width: 62%;
-						top: 27%;
-					}
-					@include tablet {
-						left: 15%;
-					}
-					@include mobile {
-						width: 86%;
-						max-width: 360px;
-						left: 17%;
-					}
-					.ch-effect {
-						animation: fadeComplexOp 2.6s infinite;
-					}
-				}
-				.ch-card {
-					left: 21%;
-					@include semiLgDesktop {
-						left: 19%;
-					}
-					@include smDesktop {
-						left: 15%;
-					}
-					@include tablet {
-						left: 12%;
-					}
-				}
-			}
-			// lux
-			&:last-of-type {
-				max-width: 1000px;
-				width: 64%;
-				right: 0;
-				@include xlDesktop {
-					right: -4%;
-				}
-				@include smDesktop {
-					width: 80%;
-					max-height: 95%;
-				}
-				@include mobile {
-					width: 100%;
-					right: -12%;
-				}
+    .character-wrap {
+      position: absolute;
+      height: 100%;
+      transition: 0.2s all ease-in;
+      // ezreal
+      &:first-of-type {
+        width: 50%;
+        max-width: 850px;
+        left: 8%;
+        @include xlDesktop {
+          left: 4%;
+        }
+        @include semiLgDesktop {
+          left: 8%;
+        }
+        @include smDesktop {
+          width: 80%;
+          max-height: 55%;
+        }
+        @include mobile {
+          width: 90%;
+          left: -25px;
+        }
+        .ch-bg {
+          @include mobile {
+            max-width: 70%;
+          }
+          &:nth-of-type(2) {
+            left: -5px;
+            @include tablet {
+              max-width: 150px;
+            }
+          }
+          &:nth-of-type(3) {
+            right: 0;
+            @include smDesktop {
+              max-width: 300px;
+            }
+            @include tablet {
+              max-width: 210px;
+            }
+            @include mobile {
+              max-width: 170px;
+              right: -40px;
+            }
+          }
+          &:nth-of-type(4) {
+            bottom: 0;
+            left: 10%;
+            animation: axisYmovingHard 6s infinite ease-in-out;
+            @include semiLgDesktop {
+              left: 7%;
+            }
+            @include smDesktop {
+              max-width: 200px;
+              left: 0%;
+            }
+          }
+        }
+        .ch {
+          width: 80%;
+          top: 24%;
+          left: 15%;
+          animation: axisYmovingHarsh 8s infinite ease-in-out;
+          z-index: 2;
+          @include xlDesktop {
+            width: 78%;
+          }
+          @include lgDesktop {
+            top: 27%;
+            left: 18%;
+          }
+          @include mdDesktop {
+            top: 33%;
+          }
+          @include smDesktop {
+            width: 62%;
+            top: 27%;
+          }
+          @include tablet {
+            left: 15%;
+          }
+          @include mobile {
+            width: 86%;
+            max-width: 360px;
+            left: 17%;
+          }
+          .ch-effect {
+            animation: fadeComplexOp 2.6s infinite;
+          }
+        }
+        .ch-card {
+          left: 21%;
+          @include semiLgDesktop {
+            left: 19%;
+          }
+          @include smDesktop {
+            left: 15%;
+          }
+          @include tablet {
+            left: 12%;
+          }
+        }
+      }
+      // lux
+      &:last-of-type {
+        max-width: 1000px;
+        width: 64%;
+        right: 0;
+        @include xlDesktop {
+          right: -4%;
+        }
+        @include smDesktop {
+          width: 80%;
+          max-height: 95%;
+        }
+        @include mobile {
+          width: 100%;
+          right: -12%;
+        }
 
-				.ch {
-					bottom: 0;
-					@include mobile {
-						width: 120%;
-					}
-					.ch-effect {
-						&:nth-of-type(1) {
-							// display: none;
-							animation: scaleNfade 4s infinite ease-out;
-						}
-						&:nth-of-type(2) {
-							// display: none;
-							animation: scaleNfade2 4s ease-in-out infinite;
-						}
-						// lux light
-						&:nth-of-type(4) {
-							animation: fadeComplex 3s infinite;
-						}
-						// 花
-						&:nth-of-type(5) {
-							top: 0;
-							right: 11%;
-							animation: flowerEffect1 4.8s infinite;
-							height: 100%;
-						}
-						&:nth-of-type(6) {
-							top: 0;
-							right: 11%;
-							animation: flowerEffect2 4.8s infinite;
-							height: 100%;
-						}
-						&:nth-of-type(7) {
-							top: 0;
-							right: 11%;
-							animation: flowerEffect3 4.8s infinite;
-							height: 100%;
-						}
-						&:nth-of-type(8) {
-							top: 0;
-							// right: 11%;
-							animation: glowEffect 4s 0.5s infinite;
-							height: 100%;
-						}
-					}
-				}
-				.ch-card {
-					left: 24%;
-				}
-			}
-		}
+        .ch {
+          bottom: 0;
+          @include mobile {
+            width: 120%;
+          }
+          .ch-effect {
+            &:nth-of-type(1) {
+              // display: none;
+              animation: scaleNfade 4s infinite ease-out;
+            }
+            &:nth-of-type(2) {
+              // display: none;
+              animation: scaleNfade2 4s ease-in-out infinite;
+            }
+            // lux light
+            &:nth-of-type(4) {
+              animation: fadeComplex 3s infinite;
+            }
+            // 花
+            &:nth-of-type(5) {
+              top: 0;
+              right: 11%;
+              animation: flowerEffect1 4.8s infinite;
+              height: 100%;
+            }
+            &:nth-of-type(6) {
+              top: 0;
+              right: 11%;
+              animation: flowerEffect2 4.8s infinite;
+              height: 100%;
+            }
+            &:nth-of-type(7) {
+              top: 0;
+              right: 11%;
+              animation: flowerEffect3 4.8s infinite;
+              height: 100%;
+            }
+            &:nth-of-type(8) {
+              top: 0;
+              // right: 11%;
+              animation: glowEffect 4s 0.5s infinite;
+              height: 100%;
+            }
+          }
+        }
+        .ch-card {
+          left: 24%;
+        }
+      }
+    }
 
-		.ch-effect,
-		.ch,
-		.ch-bg {
-			position: absolute;
-			transition: all ease 0.2s;
-		}
+    .ch-effect,
+    .ch,
+    .ch-bg {
+      position: absolute;
+      transition: all ease 0.2s;
+    }
 
-		.ch-card {
-			position: absolute;
-			bottom: 0;
-			max-width: 430px;
-			@include xlDesktop {
-				max-width: 390px;
-			}
-			@include lgDesktop {
-				max-width: 300px;
-			}
-			@include tablet {
-				max-width: 270px;
-				width: 90%;
-			}
-			@include mobile {
-				width: 205px;
-			}
-		}
-		.ch-effect {
-			right: 0;
-		}
-	}
+    .ch-card {
+      position: absolute;
+      bottom: 0;
+      max-width: 430px;
+      @include xlDesktop {
+        max-width: 390px;
+      }
+      @include lgDesktop {
+        max-width: 300px;
+      }
+      @include tablet {
+        max-width: 270px;
+        width: 90%;
+      }
+      @include mobile {
+        width: 205px;
+      }
+    }
+    .ch-effect {
+      right: 0;
+    }
+  }
 }
 
 .op {
-	opacity: 0;
+  opacity: 0;
 }
 
 .slogan {
-	color: map-get($theme-color, "lightB");
-	padding: 20px 0;
-	@include mobile {
-		line-height: 1.2em;
-		padding: 15px 0 8px 0;
-	}
-	.big {
-		font-size: 160%;
-	}
+  color: map-get($theme-color, "lightB");
+  padding: 20px 0;
+  @include mobile {
+    line-height: 1.2em;
+    padding: 15px 0 8px 0;
+  }
+  .big {
+    font-size: 160%;
+  }
 }
 
 .big {
-	margin: 0 4px;
-	top: 2px;
-	position: relative;
-	font-size: 130%;
+  margin: 0 4px;
+  top: 2px;
+  position: relative;
+  font-size: 130%;
 }
 
 .jumping-icon {
-	position: relative;
-	max-width: 1500px;
-	margin: auto;
-	@include mobile {
-		display: none;
-	}
-	.jumping-icon-col {
-		position: relative;
-		margin: auto;
-		@include size(200px, 200px);
-		@include semiLgDesktop {
-			@include size(160px, 160px);
-		}
-		@include tablet {
-			@include size(140px, 140px);
-		}
-		img.show {
-			opacity: 1;
-		}
-		img {
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			left: 0;
-			//   max-width: 100%;
-			animation: axisYmovingHard 0.6s
-				cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-		}
-	}
-	.jumping-icon-col.active {
-		img.show {
-			opacity: 0;
-		}
-		img {
-			opacity: 1;
-			animation: none;
-		}
-	}
+  position: relative;
+  max-width: 1500px;
+  margin: auto;
+  @include mobile {
+    display: none;
+  }
+  .jumping-icon-col {
+    position: relative;
+    margin: auto;
+    @include size(200px, 200px);
+    @include semiLgDesktop {
+      @include size(160px, 160px);
+    }
+    @include tablet {
+      @include size(140px, 140px);
+    }
+    img.show {
+      opacity: 1;
+    }
+    img {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      //   max-width: 100%;
+      animation: axisYmovingHard 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        infinite;
+    }
+  }
+  .jumping-icon-col.active {
+    img.show {
+      opacity: 0;
+    }
+    img {
+      opacity: 1;
+      animation: none;
+    }
+  }
 
-	&:before,
-	&:after {
-		@include pseudo(absolute, transparent);
-		max-width: 625px;
-		width: calc(50% - 120px);
-		height: 32px;
-		top: calc(50% - 24px);
-		@include mobile {
-			width: calc(50% - 85px);
-			top: calc(50% - 8px);
-		}
-	}
-	&:before {
-		background: url("../img/pageItem/jumpingIcon/dividerLeft.png");
-		background-repeat: no-repeat;
-		background-size: contain;
-		left: 5px;
-		@include mobile {
-			background: url("../img/pageItem/jumpingIcon/dividerLeftMobile.png");
-			background-repeat: no-repeat;
-			background-size: contain;
-		}
-	}
-	&:after {
-		background: url("../img/pageItem/jumpingIcon/dividerRight.png");
-		background-repeat: no-repeat;
-		background-size: contain;
-		right: 5px;
-		@include mobile {
-			background: url("../img/pageItem/jumpingIcon/dividerRightMobile.png");
-			background-repeat: no-repeat;
-			background-size: contain;
-		}
-	}
+  &:before,
+  &:after {
+    @include pseudo(absolute, transparent);
+    max-width: 625px;
+    width: calc(50% - 120px);
+    height: 32px;
+    top: calc(50% - 24px);
+    @include mobile {
+      width: calc(50% - 85px);
+      top: calc(50% - 8px);
+    }
+  }
+  &:before {
+    background: url("../img/pageItem/jumpingIcon/dividerLeft.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 5px;
+    @include mobile {
+      background: url("../img/pageItem/jumpingIcon/dividerLeftMobile.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &:after {
+    background: url("../img/pageItem/jumpingIcon/dividerRight.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 5px;
+    @include mobile {
+      background: url("../img/pageItem/jumpingIcon/dividerRightMobile.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
 }
 
 .horz-card-slider-wrap {
-	position: relative;
-	&:before,
-	&:after {
-		content: "";
-		position: absolute;
-		width: 10%;
-		height: 100%;
-		z-index: 1;
-		top: 0;
-	}
-	&:before {
-		left: 0;
-		background: -moz-linear-gradient(
-			left,
-			rgba(20, 43, 77, 0.8) 22%,
-			rgba(244, 244, 244, 0) 100%
-		);
-		/* FF3.6-15 */
-		background: -webkit-linear-gradient(
-			left,
-			rgba(20, 43, 77, 0.8) 22%,
-			rgba(244, 244, 244, 0) 100%
-		);
-		/* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(
-			to right,
-			rgba(20, 43, 77, 0.8) 22%,
-			rgba(244, 244, 244, 0) 100%
-		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11213b', endColorstr='#f4f4f4',GradientType=1 ); /* IE6-9 */
-		@include xlDesktop {
-			background: linear-gradient(
-				to right,
-				rgba(13, 40, 68, 0.8) 22%,
-				rgba(244, 244, 244, 0) 100%
-			);
-		}
-		@include mobile {
-			background: linear-gradient(
-				to right,
-				rgba(13, 9, 23, 0.8) 22%,
-				rgba(13, 9, 23, 0) 100%
-			);
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+  }
+  &:before {
+    left: 0;
+    background: -moz-linear-gradient(
+      left,
+      rgba(20, 43, 77, 0.8) 22%,
+      rgba(244, 244, 244, 0) 100%
+    );
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      rgba(20, 43, 77, 0.8) 22%,
+      rgba(244, 244, 244, 0) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgba(20, 43, 77, 0.8) 22%,
+      rgba(244, 244, 244, 0) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11213b', endColorstr='#f4f4f4',GradientType=1 ); /* IE6-9 */
+    @include xlDesktop {
+      background: linear-gradient(
+        to right,
+        rgba(13, 40, 68, 0.8) 22%,
+        rgba(244, 244, 244, 0) 100%
+      );
+    }
+    @include mobile {
+      background: linear-gradient(
+        to right,
+        rgba(13, 9, 23, 0.8) 22%,
+        rgba(13, 9, 23, 0) 100%
+      );
 
-			// blackened!!!
-			background: -moz-linear-gradient(
-				left,
-				rgba(15, 10, 21, 0.8) 30%,
-				rgba(15, 10, 21, 0) 100%
-			); /* FF3.6-15 */
-			background: -webkit-linear-gradient(
-				left,
-				rgba(15, 10, 21, 0.8) 30%,
-				rgba(15, 10, 21, 0) 100%
-			); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(
-				to right,
-				rgba(15, 10, 21, 0.8) 30%,
-				rgba(15, 10, 21, 0) 100%
-			); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11213b', endColorstr='#f4f4f4',GradientType=1 ); /* IE6-9 */
-		}
-	}
-	&:after {
-		right: 0;
-		background: -moz-linear-gradient(
-			left,
-			rgba(244, 244, 244, 0) 0%,
-			rgba(46, 18, 55, 0.8) 78%
-		); /* FF3.6-15 */
-		background: -webkit-linear-gradient(
-			left,
-			rgba(244, 244, 244, 0) 0%,
-			rgba(46, 18, 55, 0.8) 78%
-		); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(
-			to right,
-			rgba(244, 244, 244, 0) 0%,
-			rgba(46, 18, 55, 0.8) 78%
-		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#1c0d24',GradientType=1 ); /* IE6-9 */
-		@include mobile {
-			background: -moz-linear-gradient(
-				left,
-				rgba(27, 10, 33, 0) 0%,
-				rgba(27, 10, 33, 0.8) 78%
-			); /* FF3.6-15 */
-			background: -webkit-linear-gradient(
-				left,
-				rgba(27, 10, 33, 0) 0%,
-				rgba(27, 10, 33, 0.8) 78%
-			); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(
-				to right,
-				rgba(27, 10, 33, 0) 0%,
-				rgba(27, 10, 33, 0.8) 78%
-			); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#1c0d24',GradientType=1 ); /* IE6-9 */
+      // blackened!!!
+      background: -moz-linear-gradient(
+        left,
+        rgba(15, 10, 21, 0.8) 30%,
+        rgba(15, 10, 21, 0) 100%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        left,
+        rgba(15, 10, 21, 0.8) 30%,
+        rgba(15, 10, 21, 0) 100%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        to right,
+        rgba(15, 10, 21, 0.8) 30%,
+        rgba(15, 10, 21, 0) 100%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11213b', endColorstr='#f4f4f4',GradientType=1 ); /* IE6-9 */
+    }
+  }
+  &:after {
+    right: 0;
+    background: -moz-linear-gradient(
+      left,
+      rgba(244, 244, 244, 0) 0%,
+      rgba(46, 18, 55, 0.8) 78%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      rgba(244, 244, 244, 0) 0%,
+      rgba(46, 18, 55, 0.8) 78%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgba(244, 244, 244, 0) 0%,
+      rgba(46, 18, 55, 0.8) 78%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#1c0d24',GradientType=1 ); /* IE6-9 */
+    @include mobile {
+      background: -moz-linear-gradient(
+        left,
+        rgba(27, 10, 33, 0) 0%,
+        rgba(27, 10, 33, 0.8) 78%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        left,
+        rgba(27, 10, 33, 0) 0%,
+        rgba(27, 10, 33, 0.8) 78%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        to right,
+        rgba(27, 10, 33, 0) 0%,
+        rgba(27, 10, 33, 0.8) 78%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#1c0d24',GradientType=1 ); /* IE6-9 */
 
-			// blackened!!!
-			background: -moz-linear-gradient(
-				left,
-				rgba(15, 10, 21, 0) 0%,
-				rgba(15, 10, 21, 0.8) 70%
-			); /* FF3.6-15 */
-			background: -webkit-linear-gradient(
-				left,
-				rgba(15, 10, 21, 0) 0%,
-				rgba(15, 10, 21, 0.8) 70%
-			); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(
-				to right,
-				rgba(15, 10, 21, 0) 0%,
-				rgba(15, 10, 21, 0.8) 70%
-			); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f4f4f4', endColorstr='#1c0d24',GradientType=1 ); /* IE6-9 */
-		}
-	}
+      // blackened!!!
+      background: -moz-linear-gradient(
+        left,
+        rgba(15, 10, 21, 0) 0%,
+        rgba(15, 10, 21, 0.8) 70%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        left,
+        rgba(15, 10, 21, 0) 0%,
+        rgba(15, 10, 21, 0.8) 70%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        to right,
+        rgba(15, 10, 21, 0) 0%,
+        rgba(15, 10, 21, 0.8) 70%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f4f4f4', endColorstr='#1c0d24',GradientType=1 ); /* IE6-9 */
+    }
+  }
 }
 
 .horz-card {
-	text-align: center;
-	position: relative;
-	cursor: pointer;
-	span {
-		font-size: 40px;
-		font-weight: bold;
-		position: absolute;
-		top: 50%;
-		color: #222;
-	}
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  span {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    color: #222;
+  }
 }
 
 // over-write slider style
 .slick-dots {
-	bottom: -30px;
+  bottom: -30px;
 }
 .slick-arrow {
-	@include size(28px, 52px);
-	z-index: 10;
-	@include mobile {
-		@include size(20px, 37px);
-	}
+  @include size(28px, 52px);
+  z-index: 10;
+  @include mobile {
+    @include size(20px, 37px);
+  }
 }
 .slick-initialized.slick-slide:focus,
 .slick-initialized.slick-slide:active,
 .slick-slide:focus,
 .slick-slide:active {
-	outline: none;
-	border: none;
+  outline: none;
+  border: none;
 }
 // slick-arrow in card-intro
 .card-slider .slick-arrow {
-	@include mobile {
-		top: 50%;
-	}
+  @include mobile {
+    top: 50%;
+  }
 }
 
 .slick-prev {
-	@include mobile {
-		left: -12px;
-	}
+  @include mobile {
+    left: -12px;
+  }
 }
 
 .slick-next {
-	@include mobile {
-		right: -12px;
-	}
+  @include mobile {
+    right: -12px;
+  }
 }
 
 .slick-prev:before,
 .slick-next:before {
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	animation: arrowOpacity 3s infinite;
-	@include size(28px, 52px);
-	@include mobile {
-		@include size(20px, 37px);
-	}
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  animation: arrowOpacity 3s infinite;
+  @include size(28px, 52px);
+  @include mobile {
+    @include size(20px, 37px);
+  }
 }
 .slick-prev:before {
-	background: url("../img/pageItem/heroIntro/leftArrow.png");
-	background-size: contain;
-	background-repeat: no-repeat;
+  background: url("../img/pageItem/heroIntro/leftArrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .slick-next:before {
-	background: url("../img/pageItem/heroIntro/rightArrow.png");
-	background-size: contain;
-	background-repeat: no-repeat;
+  background: url("../img/pageItem/heroIntro/rightArrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .slick-dots {
-	li button:before {
-		color: darken(map-get($theme-color, "golden"), 10);
-	}
-	li.slick-active button:before {
-		color: map-get($theme-color, "golden");
-	}
+  li button:before {
+    color: darken(map-get($theme-color, "golden"), 10);
+  }
+  li.slick-active button:before {
+    color: map-get($theme-color, "golden");
+  }
 }
 
 // sec-title
 .sec-slogan {
-	font-size: 44px;
-	text-shadow: 0 0 5px #222;
-	margin: 0 0 10px 0;
-	@include mobile {
-		font-size: 28px;
-		margin: 0 0 8px 0;
-		line-height: 34px;
-	}
+  font-size: 44px;
+  text-shadow: 0 0 5px #222;
+  margin: 0 0 10px 0;
+  @include mobile {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+    line-height: 34px;
+  }
 }
 
 .hero-intro-wrap {
-	background: url("../img/pageItem/heroIntro/bg/fullBgHorz.jpg");
-	padding: 4% 0 5% 0;
-	transition: background 0.5s linear;
-	@include tablet {
-		padding: 12% 0;
-	}
-	@include mobile {
-		background: url("../img/pageItem/heroIntro/bg/fullBgMobile.jpg");
-		min-height: calc(100vh - 50px);
-	}
-	.card-slider {
-		max-width: 1280px;
-		margin: auto;
-		@include lgDesktop {
-			max-width: 90%;
-		}
-		@include tablet {
-			max-width: calc(100% - 76px);
-		}
-	}
+  background: url("../img/pageItem/heroIntro/bg/fullBgHorz.jpg");
+  padding: 4% 0 5% 0;
+  transition: background 0.5s linear;
+  @include tablet {
+    padding: 12% 0;
+  }
+  @include mobile {
+    background: url("../img/pageItem/heroIntro/bg/fullBgMobile.jpg");
+    min-height: calc(100vh - 50px);
+  }
+  .card-slider {
+    max-width: 1280px;
+    margin: auto;
+    @include lgDesktop {
+      max-width: 90%;
+    }
+    @include tablet {
+      max-width: calc(100% - 76px);
+    }
+  }
 
-	.hero-intro {
-		color: map-get($theme-color, wh);
-		display: flex;
-		padding: 40px 0 0 0;
-		flex-wrap: wrap;
-		// remove focus offset
-		&:focus {
-			outline: none;
-		}
-		// &:nth-of-type(odd) {
-		//   flex-direction: row-reverse;
-		// }
+  .hero-intro {
+    color: map-get($theme-color, wh);
+    display: flex;
+    padding: 40px 0 0 0;
+    flex-wrap: wrap;
+    // remove focus offset
+    &:focus {
+      outline: none;
+    }
+    // &:nth-of-type(odd) {
+    //   flex-direction: row-reverse;
+    // }
 
-		// make row-reversed in even slide
-		&:nth-of-type(even) {
-			flex-direction: row-reverse;
-			// lux led
-			.led {
-				img {
-					right: unset;
-					left: -27px;
-					@include mobile {
-						left: unset;
-						right: -11px;
-					}
-				}
-			}
-		}
-		@include mdDesktop {
-			padding: 5px 0;
-		}
-		@include lgTablet {
-			flex-direction: column;
-		}
-	}
+    // make row-reversed in even slide
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      // lux led
+      .led {
+        img {
+          right: unset;
+          left: -27px;
+          @include mobile {
+            left: unset;
+            right: -11px;
+          }
+        }
+      }
+    }
+    @include mdDesktop {
+      padding: 5px 0;
+    }
+    @include lgTablet {
+      flex-direction: column;
+    }
+  }
 
-	.hero-intro-subSlogan {
-		@include mobile {
-			display: none;
-		}
-	}
+  .hero-intro-subSlogan {
+    @include mobile {
+      display: none;
+    }
+  }
 
-	.left-intro {
-		width: calc(47% - 30px);
-		margin: 0 0 0 3%;
-		@include lgTablet {
-			width: 100%;
-			margin: 0;
-		}
-		@include mobile {
-			text-align: center;
-			.hero-title-wrap {
-				display: none;
-			}
-		}
-	}
-	.hero-title-wrap {
-		position: relative;
-		&:before {
-			background: url("../img/pageItem/heroIntro/switcher/decoKnotL.png");
-			left: 0;
-		}
-		&:after {
-			background: url("../img/pageItem/heroIntro/switcher/decoKnotR.png");
-			right: 0;
-		}
-		&:before,
-		&:after {
-			@include pseudo(absolute, transparent);
-			@include size(10px, 7px);
-			background-size: cover;
-			top: 21px;
-			z-index: 2;
-			@include mobile {
-				top: 19px;
-			}
-		}
-	}
-	.hero-title-wrap.apply-wrap {
-		&:before,
-		&:after {
-			display: none;
-		}
-	}
-	.card-paraph {
-		padding: 20px 0 0 0;
-		letter-spacing: 1px;
-		font-size: 18px;
-		line-height: 1.9rem;
-		max-width: calc(100% - 40px);
-		@include mdDesktop {
-			max-width: 100%;
-			letter-spacing: 0.5px;
-			line-height: 1.8rem;
-		}
-		@include tablet {
-			font-size: 14px;
-			padding: 0;
-			margin: 0;
-			display: inline-block;
-		}
-		.big {
-			top: 0;
-		}
-	}
-	.addition-info {
-		display: block;
-		margin: 10px auto 0 auto;
-		line-height: 1.5em;
-	}
+  .left-intro {
+    width: calc(47% - 30px);
+    margin: 0 0 0 3%;
+    @include lgTablet {
+      width: 100%;
+      margin: 0;
+    }
+    @include mobile {
+      text-align: center;
+      .hero-title-wrap {
+        display: none;
+      }
+    }
+  }
+  .hero-title-wrap {
+    position: relative;
+    &:before {
+      background: url("../img/pageItem/heroIntro/switcher/decoKnotL.png");
+      left: 0;
+    }
+    &:after {
+      background: url("../img/pageItem/heroIntro/switcher/decoKnotR.png");
+      right: 0;
+    }
+    &:before,
+    &:after {
+      @include pseudo(absolute, transparent);
+      @include size(10px, 7px);
+      background-size: cover;
+      top: 21px;
+      z-index: 2;
+      @include mobile {
+        top: 19px;
+      }
+    }
+  }
+  .hero-title-wrap.apply-wrap {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  .card-paraph {
+    padding: 20px 0 0 0;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 1.9rem;
+    max-width: calc(100% - 40px);
+    @include mdDesktop {
+      max-width: 100%;
+      letter-spacing: 0.5px;
+      line-height: 1.8rem;
+    }
+    @include tablet {
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+    }
+    .big {
+      top: 0;
+    }
+  }
+  .addition-info {
+    display: block;
+    margin: 10px auto 0 auto;
+    line-height: 1.5em;
+  }
 
-	.middle-intro {
-		width: 60px;
-	}
-	.right-intro {
-		width: calc(50% - 30px);
-		padding: 50px 0 0 0;
-		@include lgTablet {
-			width: 100%;
-		}
-		@include tablet {
-			padding: 0;
-		}
-		@include mobile {
-			padding: 25px 0 0 0;
-		}
-		// 手機 立即申辦旁邊裝飾點取消
-		.hero-title-wrap {
-			@include mobile {
-				&::before,
-				&:after {
-					display: none;
-				}
-			}
-		}
-	}
-	.card-img {
-		width: 100%;
-		max-width: 480px;
-		position: relative;
-		z-index: 2;
-		margin: auto;
-		@include mdMobile {
-			max-width: 280px;
-		}
-		.card-led {
-			position: absolute;
-			max-width: 100%;
-		}
-	}
-	// ezreal led
-	.led {
-		position: relative;
-		img {
-			position: absolute;
-			z-index: 1;
-			right: -27px;
-			top: -119px;
-			max-width: 200px;
-			&:nth-of-type(2).active {
-				animation: circleRotate cubic-bezier(0, 0.59, 0.57, 1.05) 3s
-					infinite;
-				@include mobile {
-					animation: none;
-				}
-			}
-			@include mobile {
-				width: 75px;
-				height: 75px;
-				right: 4px;
-				top: -40px;
-			}
-		}
-	}
-	.hero-title-col {
-		width: 176px;
-		height: 47px;
-		display: inline-block;
-		text-align: center;
-		font-size: 25px;
-		letter-spacing: 1px;
-		background: url("../img/pageItem/heroIntro/titlebg.png") no-repeat
-			center;
-		background-size: contain;
-		@include mobile {
-			width: 120px;
-			height: 42px;
-		}
-		&::before,
-		&::after {
-			content: "";
-			background-color: map-get($theme-color, "golden");
-			height: 1px;
-			position: absolute;
-			top: 50%;
-			z-index: -2;
-		}
-		&::before {
-			left: 2px;
-			@include mobile {
-				animation: none;
-				width: calc(50% - 60px);
-			}
-		}
-		&::after {
-			@include mobile {
-				animation: none;
-				width: calc(50% - 60px);
-				right: 0;
-			}
-		}
-	}
+  .middle-intro {
+    width: 60px;
+  }
+  .right-intro {
+    width: calc(50% - 30px);
+    padding: 50px 0 0 0;
+    @include lgTablet {
+      width: 100%;
+    }
+    @include tablet {
+      padding: 0;
+    }
+    @include mobile {
+      padding: 25px 0 0 0;
+    }
+    // 手機 立即申辦旁邊裝飾點取消
+    .hero-title-wrap {
+      @include mobile {
+        &::before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  .card-img {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    @include mdMobile {
+      max-width: 280px;
+    }
+    .card-led {
+      position: absolute;
+      max-width: 100%;
+    }
+  }
+  // ezreal led
+  .led {
+    position: relative;
+    img {
+      position: absolute;
+      z-index: 1;
+      right: -27px;
+      top: -119px;
+      max-width: 200px;
+      &:nth-of-type(2).active {
+        animation: circleRotate cubic-bezier(0, 0.59, 0.57, 1.05) 3s infinite;
+        @include mobile {
+          animation: none;
+        }
+      }
+      @include mobile {
+        width: 75px;
+        height: 75px;
+        right: 4px;
+        top: -40px;
+      }
+    }
+  }
+  .hero-title-col {
+    width: 176px;
+    height: 47px;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+    background: url("../img/pageItem/heroIntro/titlebg.png") no-repeat center;
+    background-size: contain;
+    @include mobile {
+      width: 120px;
+      height: 42px;
+    }
+    &::before,
+    &::after {
+      content: "";
+      background-color: map-get($theme-color, "golden");
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      z-index: -2;
+    }
+    &::before {
+      left: 2px;
+      @include mobile {
+        animation: none;
+        width: calc(50% - 60px);
+      }
+    }
+    &::after {
+      @include mobile {
+        animation: none;
+        width: calc(50% - 60px);
+        right: 0;
+      }
+    }
+  }
 
-	// 當active啟動金線
-	.hero-title-col.active {
-		&::before {
-			left: 2px;
-			animation: leftLine 1s forwards 3;
-			@include mobile {
-				animation: none;
-			}
-		}
-		&::after {
-			animation: rightLine 1s 0.5s forwards 3;
-			@include mobile {
-				animation: none;
-			}
-		}
-	}
-	.hero-title-col.apply-now {
-		background: url("../img/pageItem/heroIntro/titlebgFilled.png") no-repeat
-			center;
-		background-size: contain;
-		&::before {
-			display: none;
-			// @include mobile {
-			// 	display: none;
-			// }
-		}
-		&::after {
-			display: none;
-			// @include mobile {
-			// 	display: none;
-			// }
-		}
-	}
+  // 當active啟動金線
+  .hero-title-col.active {
+    &::before {
+      left: 2px;
+      animation: leftLine 1s forwards 3;
+      @include mobile {
+        animation: none;
+      }
+    }
+    &::after {
+      animation: rightLine 1s 0.5s forwards 3;
+      @include mobile {
+        animation: none;
+      }
+    }
+  }
+  .hero-title-col.apply-now {
+    background: url("../img/pageItem/heroIntro/titlebgFilled.png") no-repeat
+      center;
+    background-size: contain;
+    &::before {
+      display: none;
+      // @include mobile {
+      // 	display: none;
+      // }
+    }
+    &::after {
+      display: none;
+      // @include mobile {
+      // 	display: none;
+      // }
+    }
+  }
 
-	// 立即申辦 金線
-	.hero-title-col.apply-now.active {
-		// &::before {
+  // 立即申辦 金線
+  .hero-title-col.apply-now.active {
+    // &::before {
 
-		// 	animation: leftLine 1s 1s forwards 3;
-		// }
-		// &::after {
-		// 	animation: rightLine 1s 1.5s forwards 3;
-		// }
-	}
-	.hero-title {
-		position: relative;
-		top: 5px;
-		font-weight: bold;
-		@include mobile {
-			font-size: 18px;
-			top: 0px;
-		}
-	}
-	.genre-switcher {
-		margin: auto;
-		text-align: center;
-		@include mobile {
-			display: flex;
-			width: calc(100% - 70px);
-		}
-		li {
-			cursor: pointer;
-			list-style: none;
-			display: inline-block;
-			font-size: 28px;
-			color: #6e5b34;
-			padding: 5px 20px;
-			position: relative;
-			@include mobile {
-				font-size: 19px;
-				flex: 1;
-				margin: 0 0 0 24px;
-				padding: 5px 0 12px 0;
-			}
-			&:before {
-				width: 14px;
-				height: 14px;
-				@include pseudo(absolute, transparent);
-				border: solid 2px #6e5b34;
-				border-radius: 20px;
-				left: -4px;
-				top: calc(50% - 7px);
-				@include mobile {
-					left: -8px;
-				}
-			}
-		}
-		li.active-genre {
-			font-weight: bold;
-			color: map-get($theme-color, "golden");
-			&:before {
-				border: solid 2px map-get($theme-color, golden);
-				@include pseudo(absolute, map-get($theme-color, golden));
-			}
-		}
-	}
+    // 	animation: leftLine 1s 1s forwards 3;
+    // }
+    // &::after {
+    // 	animation: rightLine 1s 1.5s forwards 3;
+    // }
+  }
+  .hero-title {
+    position: relative;
+    top: 5px;
+    font-weight: bold;
+    @include mobile {
+      font-size: 18px;
+      top: 0px;
+    }
+  }
+  .genre-switcher {
+    margin: auto;
+    text-align: center;
+    @include mobile {
+      display: flex;
+      width: calc(100% - 70px);
+    }
+    li {
+      cursor: pointer;
+      list-style: none;
+      display: inline-block;
+      font-size: 28px;
+      color: #6e5b34;
+      padding: 5px 20px;
+      position: relative;
+      @include mobile {
+        font-size: 19px;
+        flex: 1;
+        margin: 0 0 0 24px;
+        padding: 5px 0 12px 0;
+      }
+      &:before {
+        width: 14px;
+        height: 14px;
+        @include pseudo(absolute, transparent);
+        border: solid 2px #6e5b34;
+        border-radius: 20px;
+        left: -4px;
+        top: calc(50% - 7px);
+        @include mobile {
+          left: -8px;
+        }
+      }
+    }
+    li.active-genre {
+      font-weight: bold;
+      color: map-get($theme-color, "golden");
+      &:before {
+        border: solid 2px map-get($theme-color, golden);
+        @include pseudo(absolute, map-get($theme-color, golden));
+      }
+    }
+  }
 
-	.round-switcher {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		position: relative;
-		@include mobile {
-			margin: 0;
-		}
-		.switcher-title {
-			position: relative;
-			flex: 1;
-			@include mdDesktop {
-				width: calc(50% - 196px);
-			}
-			@include tablet {
-				margin: 10px 0;
-				width: 100%;
-			}
-			@include mobile {
-				position: absolute;
-				width: auto;
-				margin: 0;
-				font-size: 11px;
-			}
+  .round-switcher {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    @include mobile {
+      margin: 0;
+    }
+    .switcher-title {
+      position: relative;
+      flex: 1;
+      @include mdDesktop {
+        width: calc(50% - 196px);
+      }
+      @include tablet {
+        margin: 10px 0;
+        width: 100%;
+      }
+      @include mobile {
+        position: absolute;
+        width: auto;
+        margin: 0;
+        font-size: 11px;
+      }
 
-			&:before {
-				@include pseudo(absolute, transparent);
-				@include size(10px, 7px);
-				top: 12px;
-				z-index: 2;
-			}
-			// 切換單張 金線
-			&:after {
-				@include size(calc(100% - 140px), 1px);
-				background-color: map-get($theme-color, golden);
-				content: "";
-				position: absolute;
-				left: 0;
-				top: 15px;
-				@include mobile {
-					content: none;
-				}
-			}
-			// 信用卡
-			&:first-of-type {
-				text-align: right;
-				@include mdDesktop {
-					top: -55px;
-				}
-				@include tablet {
-					top: -25px;
-				}
-				@include mobile {
-					left: 17px;
-					top: 25px;
-				}
-				// 信用卡的金點點
-				&:before {
-					background: url("../img/pageItem/heroIntro/switcher/decoKnotL.png");
-					background-size: cover;
-					background-repeat: no-repeat;
-					left: 0;
-					@include mobile {
-						display: none;
-					}
-				}
-			}
-			// 簽帳金融卡
-			&:last-of-type {
-				@include mdDesktop {
-					top: 75px;
-				}
-				@include tablet {
-					top: 35px;
-				}
-				@include mobile {
-					right: 0px;
-					top: unset;
-					bottom: 21px;
-				}
-				&:before {
-					background: url("../img/pageItem/heroIntro/switcher/decoKnotR.png");
-					background-size: cover;
-					background-repeat: no-repeat;
-					right: 0;
-					@include mobile {
-						display: none;
-					}
-				}
-				&:after {
-					right: 0;
-					left: unset;
-				}
-			}
-			img {
-				width: 140px;
-				@include mobile {
-					width: 80px;
-				}
-			}
-		}
+      &:before {
+        @include pseudo(absolute, transparent);
+        @include size(10px, 7px);
+        top: 12px;
+        z-index: 2;
+      }
+      // 切換單張 金線
+      &:after {
+        @include size(calc(100% - 140px), 1px);
+        background-color: map-get($theme-color, golden);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 15px;
+        @include mobile {
+          content: none;
+        }
+      }
+      // 信用卡
+      &:first-of-type {
+        text-align: right;
+        @include mdDesktop {
+          top: -55px;
+        }
+        @include tablet {
+          top: -25px;
+        }
+        @include mobile {
+          left: 17px;
+          top: 25px;
+        }
+        // 信用卡的金點點
+        &:before {
+          background: url("../img/pageItem/heroIntro/switcher/decoKnotL.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          left: 0;
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+      // 簽帳金融卡
+      &:last-of-type {
+        @include mdDesktop {
+          top: 75px;
+        }
+        @include tablet {
+          top: 35px;
+        }
+        @include mobile {
+          right: 0px;
+          top: unset;
+          bottom: 21px;
+        }
+        &:before {
+          background: url("../img/pageItem/heroIntro/switcher/decoKnotR.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          right: 0;
+          @include mobile {
+            display: none;
+          }
+        }
+        &:after {
+          right: 0;
+          left: unset;
+        }
+      }
+      img {
+        width: 140px;
+        @include mobile {
+          width: 80px;
+        }
+      }
+    }
 
-		.switcher-list {
-			padding: 0 10px;
-			@include mdDesktop {
-				margin: auto;
-			}
-			@include tablet {
-				max-width: 340px;
-				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				justify-content: center;
-			}
-			@include mobile {
-				width: 270px;
-				padding: 0;
-			}
-		}
-		.switcher-item {
-			cursor: pointer;
-			transition: all cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s;
-			opacity: 0.4;
-			@include size(65px, 65px);
-			margin: 0 7px;
-			@include lgDesktop {
-				margin: 0;
-			}
-			@include tablet {
-				@include size(50px, 50px);
-				margin: 4px 2px;
-			}
-			@include mobile {
-				margin: 4px 0px;
-			}
-		}
+    .switcher-list {
+      padding: 0 10px;
+      @include mdDesktop {
+        margin: auto;
+      }
+      @include tablet {
+        max-width: 340px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      @include mobile {
+        width: 270px;
+        padding: 0;
+      }
+    }
+    .switcher-item {
+      cursor: pointer;
+      transition: all cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s;
+      opacity: 0.4;
+      @include size(65px, 65px);
+      margin: 0 7px;
+      @include lgDesktop {
+        margin: 0;
+      }
+      @include tablet {
+        @include size(50px, 50px);
+        margin: 4px 2px;
+      }
+      @include mobile {
+        margin: 4px 0px;
+      }
+    }
 
-		.switcher-icon {
-			display: inline-block;
-			@include tablet {
-				display: none;
-			}
-		}
-		.switcher-item.active {
-			@include size(85px, 85px);
-			opacity: 1;
-			@include tablet {
-				@include size(75px, 75px);
-			}
-			@include tablet {
-				@include size(65px, 65px);
-			}
-		}
-	}
+    .switcher-icon {
+      display: inline-block;
+      @include tablet {
+        display: none;
+      }
+    }
+    .switcher-item.active {
+      @include size(85px, 85px);
+      opacity: 1;
+      @include tablet {
+        @include size(75px, 75px);
+      }
+      @include tablet {
+        @include size(65px, 65px);
+      }
+    }
+  }
 
-	// 只對英雄的 switcher-icon 在 1200 區段作分別
-	#hero-switcher.round-switcher {
-		.switcher-icon {
-			@include mdDesktop {
-				display: block;
-				text-align: center;
-				padding: 10px 0;
-				margin: auto;
-			}
-			@include tablet {
-				display: none;
-			}
-		}
-	}
+  // 只對英雄的 switcher-icon 在 1200 區段作分別
+  #hero-switcher.round-switcher {
+    .switcher-icon {
+      @include mdDesktop {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        margin: auto;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+  }
 }
 
 // 普羅款跟經典款的手機小字
 #puro-switcher.round-switcher,
 #classic-switcher.round-switcher {
-	.switcher-title {
-		@include mobile {
-			&:first-of-type {
-				left: calc(50% - 105px);
-			}
-			&:last-of-type {
-				right: calc(50% - 130px);
-			}
-		}
-	}
+  .switcher-title {
+    @include mobile {
+      &:first-of-type {
+        left: calc(50% - 105px);
+      }
+      &:last-of-type {
+        right: calc(50% - 130px);
+      }
+    }
+  }
 }
 
 // bonus
 .bonus-sec {
-	padding: 5% 0;
-	background: url("../img/pageItem/bg/bonusBg.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	@include mobile {
-		padding: 8vh 0;
-	}
+  padding: 5% 0;
+  background: url("../img/pageItem/bg/bonusBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include mobile {
+    padding: 8vh 0;
+  }
 }
 .bonus-wrap {
-	padding: 15px 0 0 0;
-	@include mobile {
-		padding: 0;
-	}
-	.bonus-list {
-		max-width: 720px;
-		position: relative;
-		margin: 0 0 20px 0;
-		// mobile's skill 1
-		&:nth-of-type(5) {
-			margin: 25px 0 17px 0;
-		}
-		@include xlDesktop {
-			max-width: 700px;
-		}
-		@include tablet {
-			width: 90%;
-		}
-		@include mobile {
-			margin: 10px 0 17px 0;
-		}
-		a {
-			cursor: pointer;
-			border: none;
-			outline: none;
-			position: absolute;
-			background-color: transparent;
-			right: 20px;
-			top: calc(50% - 35px);
-			transition: all ease 0.2s;
-			&:hover {
-				transform: scale(1.05);
-			}
-			@include mobile {
-				right: 5px;
-				width: 60px;
-				top: calc(50% - 24px);
-			}
-			@include mdMobile {
-				width: 50px;
-				height: 50px;
-				top: calc(50% - 19px);
-			}
-		}
-	}
+  padding: 15px 0 0 0;
+  @include mobile {
+    padding: 0;
+  }
+  .bonus-list {
+    max-width: 720px;
+    position: relative;
+    margin: 0 0 20px 0;
+    // mobile's skill 1
+    &:nth-of-type(5) {
+      margin: 25px 0 17px 0;
+    }
+    @include xlDesktop {
+      max-width: 700px;
+    }
+    @include tablet {
+      width: 90%;
+    }
+    @include mobile {
+      margin: 10px 0 17px 0;
+    }
+    a {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      position: absolute;
+      background-color: transparent;
+      right: 20px;
+      top: calc(50% - 35px);
+      transition: all ease 0.2s;
+      &:hover {
+        transform: scale(1.05);
+      }
+      @include mobile {
+        right: 5px;
+        width: 60px;
+        top: calc(50% - 24px);
+      }
+      @include mdMobile {
+        width: 50px;
+        height: 50px;
+        top: calc(50% - 19px);
+      }
+    }
+  }
 }
 
 // 大禮包
 .gift-sec {
-	padding: 5% 0 7% 0;
-	background: url("../img/pageItem/bg/giftBg.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	@include tablet {
-		background: url("../img/pageItem/bg/giftBgMobile.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-	}
-	@include mobile {
-		padding: 7% 0 17% 0;
-	}
-	.gift-col {
-		max-width: 1280px;
-		background: #1d4272;
-		background: -webkit-radial-gradient(circle, #1d4272, #071625);
-		background: linear-gradient(#1d4272, #071625);
-		background: -moz-radial-gradient(center top, #1d4272, #071625);
-		background: radial-gradient(circle, #1d4272, #071625);
-		padding: 60px 40px;
-		position: relative;
-		border-right: 3px solid #7d5e30;
-		border-left: 3px solid #7d5e30;
-		@include mobile {
-			border: none;
-			.mobile16 {
-				text-align: left;
-			}
-		}
-		&:first-of-type {
-			margin: 0 0 70px 0;
-			h4 {
-				max-width: 760px;
-				margin: 0 auto 12px auto;
-				@include mobile {
-					text-align: left;
-					margin: 0 auto 7px auto;
-				}
-			}
-		}
-		&:before,
-		&:after {
-			left: 0;
-			width: 100%;
-			@include pseudo(absolute, transparent);
-		}
-		&:before {
-			height: 44px;
-			background: url("../img/pageItem/gaming/colTopLine.png");
-			background-position: center;
-			background-repeat: no-repeat;
-			top: -5px;
-			@include mobile {
-				background-size: 660px;
-				top: -14px;
-			}
-		}
-		&:after {
-			height: 24px;
-			background: url("../img/pageItem/gaming/colBottomLine.png");
-			background-position: center;
-			background-repeat: no-repeat;
-			bottom: -11px;
-			@include mobile {
-				display: none;
-			}
-		}
-		@include lgDesktop {
-			width: 95%;
-		}
-		@include mobile {
-			width: 90%;
-			padding: 30px 15px;
-		}
+  padding: 5% 0 7% 0;
+  background: url("../img/pageItem/bg/giftBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include tablet {
+    background: url("../img/pageItem/bg/giftBgMobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  @include mobile {
+    padding: 7% 0 17% 0;
+  }
+  .gift-col {
+    max-width: 1280px;
+    background: #1d4272;
+    background: -webkit-radial-gradient(circle, #1d4272, #071625);
+    background: linear-gradient(#1d4272, #071625);
+    background: -moz-radial-gradient(center top, #1d4272, #071625);
+    background: radial-gradient(circle, #1d4272, #071625);
+    padding: 60px 40px;
+    position: relative;
+    border-right: 3px solid #7d5e30;
+    border-left: 3px solid #7d5e30;
+    @include mobile {
+      border: none;
+      .mobile16 {
+        text-align: left;
+      }
+    }
+    &:first-of-type {
+      margin: 0 0 70px 0;
+      h4 {
+        max-width: 760px;
+        margin: 0 auto 12px auto;
+        @include mobile {
+          text-align: left;
+          margin: 0 auto 7px auto;
+        }
+      }
+    }
+    &:before,
+    &:after {
+      left: 0;
+      width: 100%;
+      @include pseudo(absolute, transparent);
+    }
+    &:before {
+      height: 44px;
+      background: url("../img/pageItem/gaming/colTopLine.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      top: -5px;
+      @include mobile {
+        background-size: 660px;
+        top: -14px;
+      }
+    }
+    &:after {
+      height: 24px;
+      background: url("../img/pageItem/gaming/colBottomLine.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      bottom: -11px;
+      @include mobile {
+        display: none;
+      }
+    }
+    @include lgDesktop {
+      width: 95%;
+    }
+    @include mobile {
+      width: 90%;
+      padding: 30px 15px;
+    }
 
-		h2.lgolden-text {
-			min-height: 53px;
-			position: relative;
-			@include tablet {
-				min-height: unset;
-			}
-			&::before,
-			&:after {
-				@include pseudo(absolute, transparent);
-				height: 11px;
-			}
-		}
-	}
+    h2.lgolden-text {
+      min-height: 53px;
+      position: relative;
+      @include tablet {
+        min-height: unset;
+      }
+      &::before,
+      &:after {
+        @include pseudo(absolute, transparent);
+        height: 11px;
+      }
+    }
+  }
 
-	.gift-inner-wrap {
-		display: flex;
-		@include tablet {
-			flex-direction: column;
-		}
-	}
+  .gift-inner-wrap {
+    display: flex;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
 
-	.gift-inner-left {
-		width: 75%;
-		@include smDesktop {
-			width: 50%;
-		}
-		@include tablet {
-			width: 100%;
-		}
-		h2.lgolden-text {
-			position: relative;
-			top: -5px;
-			@include mobile {
-				padding: 20px 0 0 0;
-			}
-			&::before,
-			&:after {
-				width: 260px;
-				top: 25px;
-			}
-			&::before {
-				background: url("../img/pageItem/nuGift/leftDecoWide.png");
-				background-repeat: no-repeat;
-				background-size: contain;
-				left: 5%;
-				@include smDesktop {
-					display: none;
-				}
-			}
-			&::after {
-				background: url("../img/pageItem/nuGift/rightDecoWide.png");
-				background-repeat: no-repeat;
-				background-size: contain;
-				right: 5%;
-				@include smDesktop {
-					display: none;
-				}
-			}
-		}
+  .gift-inner-left {
+    width: 75%;
+    @include smDesktop {
+      width: 50%;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    h2.lgolden-text {
+      position: relative;
+      top: -5px;
+      @include mobile {
+        padding: 20px 0 0 0;
+      }
+      &::before,
+      &:after {
+        width: 260px;
+        top: 25px;
+      }
+      &::before {
+        background: url("../img/pageItem/nuGift/leftDecoWide.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 5%;
+        @include smDesktop {
+          display: none;
+        }
+      }
+      &::after {
+        background: url("../img/pageItem/nuGift/rightDecoWide.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: 5%;
+        @include smDesktop {
+          display: none;
+        }
+      }
+    }
 
-		.nu-account-wrap.three-col {
-			.nu-account-col {
-				// mouse gift
-				&:nth-of-type(2) {
-					.nu-account-gift {
-						top: 30px;
-						max-width: 100%;
-						left: calc(50% - 130px);
-					}
-				}
-				&:last-of-type {
-					p {
-						bottom: 5px;
-					}
-				}
-			}
-		}
-	}
+    .nu-account-wrap.three-col {
+      .nu-account-col {
+        // mouse gift
+        &:nth-of-type(2) {
+          .nu-account-gift {
+            top: 30px;
+            max-width: 100%;
+            left: calc(50% - 130px);
+          }
+        }
+        &:last-of-type {
+          p {
+            bottom: 5px;
+          }
+        }
+      }
+    }
+  }
 
-	.gift-inner-right {
-		width: 25%;
-		@include smDesktop {
-			width: 50%;
-		}
-		@include tablet {
-			width: 100%;
-		}
-		h2.lgolden-text {
-			padding: 5px 0 0 0;
-			@include mobile {
-				padding: 20px 0 0 0;
-			}
-			&::before,
-			&:after {
-				width: 58px;
-				top: 20px;
-			}
-			&::before {
-				background: url("../img/pageItem/nuGift/leftDecoNarrow.png");
-				background-repeat: no-repeat;
-				background-size: contain;
-				left: 5%;
-				@include smDesktop {
-					display: none;
-				}
-			}
-			&::after {
-				background: url("../img/pageItem/nuGift/rightDecoNarrow.png");
-				background-repeat: no-repeat;
-				background-size: contain;
-				right: 5%;
-				@include smDesktop {
-					display: none;
-				}
-			}
-		}
-	}
-	.gift-btn {
-		cursor: pointer;
-		position: absolute;
-		bottom: -25px;
-		left: calc(50% - 90px);
-		width: 180px;
-		transition: all ease 0.2s;
-		z-index: 2;
-		&:hover {
-			transform: translateY(-5px);
-		}
-		@include mobile {
-			left: calc(50% - 70px);
-			width: 140px;
-		}
-	}
+  .gift-inner-right {
+    width: 25%;
+    @include smDesktop {
+      width: 50%;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    h2.lgolden-text {
+      padding: 5px 0 0 0;
+      @include mobile {
+        padding: 20px 0 0 0;
+      }
+      &::before,
+      &:after {
+        width: 58px;
+        top: 20px;
+      }
+      &::before {
+        background: url("../img/pageItem/nuGift/leftDecoNarrow.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 5%;
+        @include smDesktop {
+          display: none;
+        }
+      }
+      &::after {
+        background: url("../img/pageItem/nuGift/rightDecoNarrow.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: 5%;
+        @include smDesktop {
+          display: none;
+        }
+      }
+    }
+  }
+  .gift-btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 90px);
+    width: 180px;
+    transition: all ease 0.2s;
+    z-index: 2;
+    &:hover {
+      transform: translateY(-5px);
+    }
+    @include mobile {
+      left: calc(50% - 70px);
+      width: 140px;
+    }
+  }
 
-	// recommend section title decoration
-	#recommend-friend-col.gift-col {
-		h2.lgolden-text {
-			&::before,
-			&:after {
-				width: 260px;
-				top: 24px;
-				@include smDesktop {
-					width: 50px;
-				}
-				@include mobile {
-					top: 16px;
-				}
-			}
-			&::before {
-				background: url("../img/pageItem/nuGift/leftDecoWide.png");
-				background-repeat: no-repeat;
-				background-size: contain;
-				left: calc(50% - 390px);
-				@include smDesktop {
-					display: none;
-				}
-			}
-			&::after {
-				background: url("../img/pageItem/nuGift/rightDecoWide.png");
-				background-repeat: no-repeat;
-				background-size: contain;
-				right: calc(50% - 390px);
-				@include smDesktop {
-					display: none;
-				}
-			}
-		}
-	}
+  // recommend section title decoration
+  #recommend-friend-col.gift-col {
+    h2.lgolden-text {
+      &::before,
+      &:after {
+        width: 260px;
+        top: 24px;
+        @include smDesktop {
+          width: 50px;
+        }
+        @include mobile {
+          top: 16px;
+        }
+      }
+      &::before {
+        background: url("../img/pageItem/nuGift/leftDecoWide.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: calc(50% - 390px);
+        @include smDesktop {
+          display: none;
+        }
+      }
+      &::after {
+        background: url("../img/pageItem/nuGift/rightDecoWide.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: calc(50% - 390px);
+        @include smDesktop {
+          display: none;
+        }
+      }
+    }
+  }
 
-	.nu-account-wrap {
-		.nu-account-col {
-			max-width: 260px;
-			p {
-				position: absolute;
-				top: calc(100% - 100px);
-				width: 100%;
-				color: #42210b;
-				line-height: 1.5em;
-			}
-			.big {
-				font-size: 24px;
-			}
-		}
-		.nu-account-gift {
-			top: 0px;
-			left: 0;
-		}
-	}
+  .nu-account-wrap {
+    .nu-account-col {
+      max-width: 260px;
+      p {
+        position: absolute;
+        top: calc(100% - 100px);
+        width: 100%;
+        color: #42210b;
+        line-height: 1.5em;
+      }
+      .big {
+        font-size: 24px;
+      }
+    }
+    .nu-account-gift {
+      top: 0px;
+      left: 0;
+    }
+  }
 
-	.recommend-wrap {
-		margin: auto;
-		.recommend-col {
-			max-width: 100%;
-			a {
-				position: absolute;
-				display: block;
-				padding: 8px;
-				background-color: #a4702f;
-				left: 27%;
-				bottom: 13%;
-				border-radius: 8px;
-				&:hover {
-					color: #fff;
-				}
-			}
-		}
-	}
+  .recommend-wrap {
+    margin: auto;
+    .recommend-col {
+      max-width: 100%;
+      a {
+        position: absolute;
+        display: block;
+        padding: 8px;
+        background-color: #a4702f;
+        left: 27%;
+        bottom: 13%;
+        border-radius: 8px;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
 
-	.recommend-mobile-slider {
-		padding: 7px 0 0 0;
-		.single-col {
-			max-width: 330px;
-			margin: auto;
-			@include mobile {
-				max-width: 280px;
-			}
-			a {
-				position: absolute;
-				display: block;
-				padding: 8px;
-				background-color: #a4702f;
-				left: 30%;
-				bottom: 14%;
-				border-radius: 8px;
-				@include mobile {
-					left: 32%;
-					padding: 4px;
-				}
-			}
-		}
-	}
-	.number-big {
-		font-size: 32px;
-	}
-	h2 {
-		@include mobile {
-			padding: 12px 0 0 0;
-		}
-	}
+  .recommend-mobile-slider {
+    padding: 7px 0 0 0;
+    .single-col {
+      max-width: 330px;
+      margin: auto;
+      @include mobile {
+        max-width: 280px;
+      }
+      a {
+        position: absolute;
+        display: block;
+        padding: 8px;
+        background-color: #a4702f;
+        left: 30%;
+        bottom: 14%;
+        border-radius: 8px;
+        @include mobile {
+          left: 32%;
+          padding: 4px;
+        }
+      }
+    }
+  }
+  .number-big {
+    font-size: 32px;
+  }
+  h2 {
+    @include mobile {
+      padding: 12px 0 0 0;
+    }
+  }
 }
 
 //- .gift-inner-left switch to slider
 .nu-account-wrap {
-	.nu-account-col {
-		.nu-account-gift {
-			left: calc(50% - 130px);
-		}
-		.nu-account-gift.mouse {
-			@include smDesktop {
-				top: 30px;
-			}
-		}
-	}
+  .nu-account-col {
+    .nu-account-gift {
+      left: calc(50% - 130px);
+    }
+    .nu-account-gift.mouse {
+      @include smDesktop {
+        top: 30px;
+      }
+    }
+  }
 }
 
 // behave
 .three-col {
-	display: flex;
+  display: flex;
 }
 
 .single-col {
-	position: relative;
-	&:hover {
-		.hover-scale {
-			transform: scale(1.08);
-		}
-		.transparent {
-			opacity: 1;
-		}
-	}
-	.single-col-main {
-		position: relative;
-		max-width: 100%;
-	}
-	.single-col-up {
-		position: absolute;
-		top: 0;
-		left: 0;
-		max-width: 100%;
-	}
-	.hover-scale {
-		position: absolute;
-		transition: all ease 0.2s;
-	}
-	.transparent {
-		opacity: 0;
-		transition: all ease 0.2s;
-	}
+  position: relative;
+  &:hover {
+    .hover-scale {
+      transform: scale(1.08);
+    }
+    .transparent {
+      opacity: 1;
+    }
+  }
+  .single-col-main {
+    position: relative;
+    max-width: 100%;
+  }
+  .single-col-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+  }
+  .hover-scale {
+    position: absolute;
+    transition: all ease 0.2s;
+  }
+  .transparent {
+    opacity: 0;
+    transition: all ease 0.2s;
+  }
 }
 
 .white-text {
-	color: map-get($theme-color, "wh");
+  color: map-get($theme-color, "wh");
 }
 
 .golden-text {
-	color: map-get($theme-color, "golden");
+  color: map-get($theme-color, "golden");
 }
 
 .modalGolden-text {
-	color: map-get($theme-color, "modalGold");
+  color: map-get($theme-color, "modalGold");
 }
 
 .lgolden-text {
-	color: map-get($theme-color, "lightGolden");
+  color: map-get($theme-color, "lightGolden");
+}
+
+.pred-text {
+  color: #ff5072;
 }
 
 .mobile16 {
-	@include mobile {
-		font-size: 16px;
-	}
+  @include mobile {
+    font-size: 16px;
+  }
 }
 
 .mobile22 {
-	@include mobile {
-		font-size: 22px;
-	}
+  @include mobile {
+    font-size: 22px;
+  }
 }
 
 // 限時優惠
 .limit-sec {
-	background: #1d4272;
-	// background: url("../img/pageItem/bg/limit-bg.png"),
-	// 	-webkit-radial-gradient(circle, #1d4272, #071625);
-	// background: url("../img/pageItem/bg/limit-bg.png"),
-	// 	linear-gradient(#1d4272, #071625);
-	// background: url("../img/pageItem/bg/limit-bg.png"),
-	// 	-moz-radial-gradient(center top, #1d4272, #071625);
-	// background: url("../img/pageItem/bg/limit-bg.png"),
-	// 	radial-gradient(circle, #1d4272, #071625);
-	background: url("../img/pageItem/bg/limitBg.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	.limit-wrap {
-		padding: 5% 0;
-		@include tablet {
-			padding: 15% 0;
-		}
-		@include mobile {
-			padding: 10vh 0;
-		}
-		.limit-inner-wrap {
-			max-width: 1160px;
-			width: 100%;
-			margin: auto;
-			@include mobile {
-				width: calc(100% - 60px);
-			}
-		}
-		.limit-col {
-			position: relative;
-			margin: auto;
-			.limit-cont {
-				position: relative;
-				max-width: 480px;
-				margin: auto;
-				margin: 60px auto 20px auto;
-				@include smDesktop {
-					max-width: 360px;
-				}
-				@include mobile {
-					max-width: 290px;
-					margin: 40px auto 20px auto;
-				}
-			}
-			&:nth-of-type(2) {
-				// 第一格跟第二格 動畫區別
-				.limit-date {
-					img {
-						&:nth-of-type(2).active {
-							animation: spinReverse 2s 1;
-						}
-					}
-				}
-			}
+  background: #1d4272;
+  background: url("../img/pageItem/bg/limitBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  .limit-wrap {
+    padding: 5% 0;
+    @include tablet {
+      padding: 15% 0;
+    }
+    @include mobile {
+      padding: 10vh 0;
+    }
+    .limit-inner-wrap {
+      max-width: 1160px;
+      width: 100%;
+      margin: auto;
+      @include mobile {
+        width: calc(100% - 60px);
+      }
+    }
+    .limit-col {
+      position: relative;
+      margin: auto;
+      .limit-cont {
+        position: relative;
+        max-width: 480px;
+        margin: auto;
+        margin: 60px auto 20px auto;
+        @include smDesktop {
+          max-width: 360px;
+        }
+        @include mobile {
+          max-width: 290px;
+          margin: 40px auto 20px auto;
+        }
+      }
+      &:nth-of-type(2) {
+        // 第一格跟第二格 動畫區別
+        .limit-date {
+          img {
+            &:nth-of-type(2).active {
+              animation: spinReverse 2s 1;
+            }
+          }
+        }
+      }
 
-			.limit-date {
-				position: absolute;
-				left: -30px;
-				top: -30px;
-				@include lgDesktop {
-					max-width: 115px;
-				}
-				@include smDesktop {
-					left: calc(50% - 220px);
-					top: 4px;
-				}
-				@include mobile {
-					left: -5px;
-					max-width: 90px;
-				}
-				img {
-					&:nth-of-type(2) {
-						position: absolute;
-						top: -3%;
-						left: -3%;
-						transform-origin: center;
-						max-width: 106%;
-					}
-					&:nth-of-type(2).active {
-						animation: spin 2s 1;
-					}
-				}
-				span.golden-text {
-					left: 0;
-					position: absolute;
-					width: 80%;
-					margin: 0 10%;
-					top: calc(50% - 30px);
-					@include mobile {
-						font-size: 13px;
-						letter-spacing: -0.5px;
-						margin: 0;
-						text-align: left;
-						left: 20%;
-						top: calc(50% - 22px);
-					}
-				}
-			}
-			.limit-main {
-				margin: auto;
-				@include smDesktop {
-					padding: 30px 0;
-				}
-			}
-			.limit-col-title {
-				position: absolute;
-				width: 100%;
-				max-width: 500px;
-				top: 12%;
-				@include smDesktop {
-					max-width: 400px;
-				}
-				@include mobile {
-					top: 15%;
-				}
-				h4 {
-					@include mdDesktop {
-						font-size: 18px;
-					}
-				}
-			}
-		}
-		.limit-btn {
-			position: absolute;
-			bottom: -18px;
-			left: calc(50% - 90px);
-			transition: all ease 0.2s;
-			&:hover {
-				transform: translateY(-5px);
-			}
-			@include mobile {
-				width: 140px;
-				left: calc(50% - 70px);
-				bottom: 0px;
-			}
-		}
-	}
+      .limit-date {
+        position: absolute;
+        left: -30px;
+        top: -30px;
+        @include lgDesktop {
+          max-width: 115px;
+        }
+        @include smDesktop {
+          left: calc(50% - 220px);
+          top: 4px;
+        }
+        @include mobile {
+          left: -5px;
+          max-width: 90px;
+        }
+        img {
+          &:nth-of-type(2) {
+            position: absolute;
+            top: -3%;
+            left: -3%;
+            transform-origin: center;
+            max-width: 106%;
+          }
+          &:nth-of-type(2).active {
+            animation: spin 2s 1;
+          }
+        }
+        span.golden-text {
+          left: 0;
+          position: absolute;
+          width: 80%;
+          margin: 0 10%;
+          top: calc(50% - 30px);
+          @include mobile {
+            font-size: 13px;
+            letter-spacing: -0.5px;
+            margin: 0;
+            text-align: left;
+            left: 20%;
+            top: calc(50% - 22px);
+          }
+        }
+      }
+      .limit-main {
+        margin: auto;
+        @include smDesktop {
+          padding: 30px 0;
+        }
+      }
+      .limit-col-title {
+        position: absolute;
+        width: 100%;
+        max-width: 500px;
+        top: 12%;
+        @include smDesktop {
+          max-width: 400px;
+        }
+        @include mobile {
+          top: 15%;
+        }
+        h4 {
+          @include mdDesktop {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .limit-btn {
+      position: absolute;
+      bottom: -18px;
+      left: calc(50% - 90px);
+      transition: all ease 0.2s;
+      &:hover {
+        transform: translateY(-5px);
+      }
+      @include mobile {
+        width: 140px;
+        left: calc(50% - 70px);
+        bottom: 0px;
+      }
+    }
+  }
 }
 
 // 尊榮禮遇
 .gaming-sec {
-	background: url("../img/pageItem/bg/gamingBg.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	.gaming-wrap {
-		padding: 100px 0;
-		@include tablet {
-			padding: 12% 0;
-		}
-	}
-	.gaming-list {
-		max-width: 1180px;
-		display: flex;
-		// screen width under 992 switch to slider mode
-		@include smDesktop {
-			display: block;
-			max-width: calc(95% - 40px);
-		}
-	}
-	.gaming-col {
-		max-width: 320px;
-		display: inline-block;
-		margin: 0 20px;
-		@include mdDesktop {
-			max-width: 280px;
-		}
-		// screen width under 992 switch to slider mode
-		@include smDesktop {
-			max-width: unset;
-		}
-		.gaming-main {
-			position: relative;
-			max-width: 100%;
-			@include smDesktop {
-				max-width: 300px;
-				left: calc(50% - 150px);
-			}
-			@include tablet {
-				max-width: 260px;
-				left: calc(50% - 130px);
-			}
-			@include mobile {
-				max-width: 240px;
-				left: calc(50% - 120px);
-			}
-		}
-		.gaming-up {
-			left: 0;
-			top: 0;
-			max-width: 100%;
-			position: absolute;
-			@include smDesktop {
-				max-width: 300px;
-				left: calc(50% - 150px);
-			}
-			@include tablet {
-				max-width: 260px;
-				left: calc(50% - 130px);
-			}
-			@include mobile {
-				max-width: 240px;
-				left: calc(50% - 120px);
-			}
-		}
-		.gaming-btn {
-			position: absolute;
-			bottom: 9px;
-			left: calc(50% - 80px);
-			width: 160px;
-			transition: all ease 0.2s;
-			@include mobile {
-				left: calc(50% - 60px);
-				width: 120px;
-			}
-			&:hover {
-				transform: translateY(-5px);
-			}
-		}
-		p {
-			width: 100%;
-			position: absolute;
-			color: #ffe4a6;
-			top: 66%;
-			font-size: 25px;
-			@include tablet {
-				top: 64%;
-				font-size: 22px;
-				line-height: 1.5em;
-			}
-			@include mobile {
-				font-size: 20px;
-			}
-			a {
-				color: #ffe4a6;
-				text-decoration: underline;
-			}
-		}
-		.sp {
-			font-size: 36px;
-			@include mobile {
-				font-size: 32px;
-			}
-		}
-	}
-	.power {
-		position: relative;
-		height: 37px;
-		overflow: hidden;
-		margin: 30px 0 40px 0;
-		@include mobile {
-			margin: 15px 0;
-		}
-		img {
-			bottom: -111px;
-			position: absolute;
-			animation: powerUpInfinite steps(4) 3s infinite;
-			left: calc(50% - 388px);
-			@include tablet {
-				left: calc(50% - 175px);
-			}
-		}
-	}
+  background: url("../img/pageItem/bg/gamingBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  .gaming-wrap {
+    padding: 100px 0;
+    @include tablet {
+      padding: 12% 0;
+    }
+  }
+  .gaming-list {
+    max-width: 1180px;
+    display: flex;
+    // screen width under 992 switch to slider mode
+    @include smDesktop {
+      display: block;
+      max-width: calc(95% - 40px);
+    }
+  }
+  .gaming-col {
+    max-width: 320px;
+    display: inline-block;
+    margin: 0 20px;
+    @include mdDesktop {
+      max-width: 280px;
+    }
+    // screen width under 992 switch to slider mode
+    @include smDesktop {
+      max-width: unset;
+    }
+    .gaming-main {
+      position: relative;
+      max-width: 100%;
+      @include smDesktop {
+        max-width: 300px;
+        left: calc(50% - 150px);
+      }
+      @include tablet {
+        max-width: 260px;
+        left: calc(50% - 130px);
+      }
+      @include mobile {
+        max-width: 240px;
+        left: calc(50% - 120px);
+      }
+    }
+    .gaming-up {
+      left: 0;
+      top: 0;
+      max-width: 100%;
+      position: absolute;
+      @include smDesktop {
+        max-width: 300px;
+        left: calc(50% - 150px);
+      }
+      @include tablet {
+        max-width: 260px;
+        left: calc(50% - 130px);
+      }
+      @include mobile {
+        max-width: 240px;
+        left: calc(50% - 120px);
+      }
+    }
+    .gaming-btn {
+      position: absolute;
+      bottom: 9px;
+      left: calc(50% - 80px);
+      width: 160px;
+      transition: all ease 0.2s;
+      @include mobile {
+        left: calc(50% - 60px);
+        width: 120px;
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+    p {
+      width: 100%;
+      position: absolute;
+      color: #ffe4a6;
+      top: 66%;
+      font-size: 25px;
+      @include tablet {
+        top: 64%;
+        font-size: 22px;
+        line-height: 1.5em;
+      }
+      @include mobile {
+        font-size: 20px;
+      }
+      a {
+        color: #ffe4a6;
+        text-decoration: underline;
+      }
+    }
+    .sp {
+      font-size: 36px;
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+  }
+  .power {
+    position: relative;
+    height: 37px;
+    overflow: hidden;
+    margin: 30px 0 40px 0;
+    @include mobile {
+      margin: 15px 0;
+    }
+    img {
+      bottom: -111px;
+      position: absolute;
+      animation: powerUpInfinite steps(4) 3s infinite;
+      left: calc(50% - 388px);
+      @include tablet {
+        left: calc(50% - 175px);
+      }
+    }
+  }
 }
 
 // if set .hide{ display:none; } will make slick-slider weird appearance
 // https://stackoverflow.com/questions/26677649/slick-slider-loaded-with-displaynone-creates-bad-initiation
 .hide {
-	height: 0px !important;
-	overflow-y: hidden !important;
+  height: 0px !important;
+  overflow-y: hidden !important;
 }
 
 .hide-sm-desktop {
-	@include smDesktop {
-		display: none;
-	}
+  @include smDesktop {
+    display: none;
+  }
 }
 .show-sm-desktop {
-	display: none;
-	@include smDesktop {
-		display: block;
-	}
+  display: none;
+  @include smDesktop {
+    display: block;
+  }
 }
 .hide-tablet {
-	@include tablet {
-		display: none;
-	}
+  @include tablet {
+    display: none;
+  }
 }
 .show-tablet {
-	display: none;
-	@include tablet {
-		display: block;
-	}
+  display: none;
+  @include tablet {
+    display: block;
+  }
 }
 .hide-mobile {
-	@include mobile {
-		display: none;
-	}
+  @include mobile {
+    display: none;
+  }
 }
 .show-mobile {
-	display: none;
-	@include mobile {
-		display: block;
-	}
+  display: none;
+  @include mobile {
+    display: block;
+  }
 }
 
 // card-intro more-btn only show in tablet
 .more-intro-btn {
-	padding: 0 0 2px 0;
-	font-size: 20px;
-	font-weight: bold;
-	position: relative;
-	z-index: 8;
-	color: map-get($theme-color, "golden");
-	border: 1px solid map-get($theme-color, "golden");
-	line-height: 18px;
-	width: 20px;
-	text-align: center;
-	&:focus {
-		outline: none;
-	}
-	&:hover {
-		text-decoration: none;
-		color: map-get($theme-color, "golden");
-	}
-	@include tablet {
-		display: inline-block;
-	}
+  padding: 0 0 2px 0;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  z-index: 8;
+  color: map-get($theme-color, "golden");
+  border: 1px solid map-get($theme-color, "golden");
+  line-height: 18px;
+  width: 20px;
+  text-align: center;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: map-get($theme-color, "golden");
+  }
+  @include tablet {
+    display: inline-block;
+  }
 }
 
 .side-btn-wrap {
-	position: fixed;
-	right: 0;
-	top: 43%;
-	z-index: 3;
-	@include mobile {
-		display: none;
-	}
-	.side-apply {
-		display: block;
-		@include size(85px, 85px);
-		transition: all ease 0.2s;
-		margin: 0 0 3vh 0;
-		img {
-			position: relative;
-		}
-	}
-	.side-apply.active {
-		transform: translateX(100%);
-	}
+  position: fixed;
+  right: 0;
+  top: 43%;
+  z-index: 3;
+  @include mobile {
+    display: none;
+  }
+  .side-apply {
+    display: block;
+    @include size(85px, 85px);
+    transition: all ease 0.2s;
+    margin: 0 0 3vh 0;
+    img {
+      position: relative;
+    }
+  }
+  .side-apply.active {
+    transform: translateX(100%);
+  }
 }
 
 ul,
 ol {
-	padding: 0;
+  padding: 0;
 }
 ol li {
-	margin: 0 0 0 30px;
+  margin: 0 0 0 30px;
 }
 // custom list icon
 li.icon-list {
-	position: relative;
-	margin: 0 0 0 34px;
-	list-style-type: none;
-	&::before {
-		@include pseudo(absolute, transparent);
-		width: 20px;
-		height: 20px;
-		background: url("../img/pageItem/modal/sword.svg");
-		background-size: 100%;
-		background-repeat: no-repeat;
-		left: -28px;
-		top: 2px;
-	}
+  position: relative;
+  margin: 0 0 0 34px;
+  list-style-type: none;
+  &::before {
+    @include pseudo(absolute, transparent);
+    width: 20px;
+    height: 20px;
+    background: url("../img/pageItem/modal/sword.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: -28px;
+    top: 2px;
+  }
 }
 
 footer {
-	color: #7c7d7d;
-	background-color: map-get($theme-color, "footerG");
-	padding: 40px 0;
-	@include mdDesktop {
-		font-size: 16px;
-	}
-	@include mobile {
-		padding: 15px 8px 55px 8px;
-	}
-	@include mdMobile {
-		font-size: 11px;
-	}
+  color: #7c7d7d;
+  background-color: map-get($theme-color, "footerG");
+  padding: 40px 0;
+  @include mdDesktop {
+    font-size: 16px;
+  }
+  @include mobile {
+    padding: 15px 8px 55px 8px;
+  }
+  @include mdMobile {
+    font-size: 11px;
+  }
 
-	.footer-list {
-		max-width: 1260px;
-		display: flex;
-		padding: 0 0 44px;
-		position: relative;
-		align-items: center;
-		justify-content: center;
-		@include smDesktop {
-			flex-direction: column;
-			align-items: start;
-			justify-content: center;
-			max-width: 600px;
-		}
-		@include mdMobile {
-			max-width: 340px;
-			padding: 0 0 24px;
-		}
-		&:after {
-			@include pseudo(absolute, #7c7d7d);
-			width: 100%;
-			bottom: 22px;
-			max-width: 1260px;
-			height: 1px;
-			left: calc(50% - 630px);
-		}
-	}
-	.footer-item {
-		margin: 0 15px;
-		display: flex;
-		flex-direction: row;
-		@include mobile {
-			margin: 2px 0;
-		}
-		&:first-of-type {
-			@include smDesktop {
-				flex-direction: row-reverse;
-			}
-		}
-	}
-	.footer-icon {
-		@include mdMobile {
-			width: 18px;
-			margin: 0 2px;
-		}
-		img {
-			max-width: 100%;
-		}
-	}
+  .footer-list {
+    max-width: 1260px;
+    display: flex;
+    padding: 0 0 44px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    @include smDesktop {
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      max-width: 600px;
+    }
+    @include mdMobile {
+      max-width: 340px;
+      padding: 0 0 24px;
+    }
+    &:after {
+      @include pseudo(absolute, #7c7d7d);
+      width: 100%;
+      bottom: 22px;
+      max-width: 1260px;
+      height: 1px;
+      left: calc(50% - 630px);
+    }
+  }
+  .footer-item {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: row;
+    @include mobile {
+      margin: 2px 0;
+    }
+    &:first-of-type {
+      @include smDesktop {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  .footer-icon {
+    @include mdMobile {
+      width: 18px;
+      margin: 0 2px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
 
-	img {
-		max-width: 1260px;
-		@include lgDesktop {
-			max-width: 100%;
-		}
-	}
-	a {
-		color: #122d8a;
-		text-decoration: underline;
-	}
-	p {
-		margin: 0;
-		padding: 0 0 50px 0;
-		position: relative;
-	}
+  img {
+    max-width: 1260px;
+    @include lgDesktop {
+      max-width: 100%;
+    }
+  }
+  a {
+    color: #122d8a;
+    text-decoration: underline;
+  }
+  p {
+    margin: 0;
+    padding: 0 0 50px 0;
+    position: relative;
+  }
 }
 
 // mobile-nav
 .mobile-nav {
-	position: fixed;
-	bottom: 0;
-	background: map-get($theme-color, "darkB");
-	width: 100%;
-	z-index: 3;
-	transform: translateY(0);
-	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-	ul {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 0;
-	}
-	li {
-		list-style: none;
-		flex: 1;
-	}
-	.nav-link {
-		padding: 8px 3px 18px 3px;
-		text-align: center;
-		font-size: 13px;
-		z-index: 5;
-		cursor: pointer;
-		position: relative;
-	}
-	.nav-item.active,
-	.nav-item:not(:last-of-type):hover {
-		&:after {
-			bottom: 10px;
-		}
-	}
-	.nav-dropdown {
-		width: 100%;
-		margin: 0;
-		background-color: rgb(242, 226, 131);
-		border-radius: 0 0 2px 2px;
-		background: linear-gradient(
-			180deg,
-			rgba(242, 226, 131, 1) 0%,
-			rgba(163, 126, 35, 1) 81%,
-			rgba(163, 126, 35, 1) 100%
-		);
-		text-align: center;
-		position: absolute;
-		right: 0;
-		bottom: 45px;
-		width: 100vw;
-		a {
-			display: inline-block;
-			width: 49%;
-			color: map-get($theme-color, "darkB");
-			padding: 8px 0;
-			&:first-of-type {
-				border-right: 1px solid map-get($theme-color, "darkB");
-			}
-		}
-	}
+  position: fixed;
+  bottom: 0;
+  background: map-get($theme-color, "darkB");
+  width: 100%;
+  z-index: 3;
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    flex: 1;
+  }
+  .nav-link {
+    padding: 8px 3px 18px 3px;
+    text-align: center;
+    font-size: 13px;
+    z-index: 5;
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-item.active,
+  .nav-item:not(:last-of-type):hover {
+    &:after {
+      bottom: 10px;
+    }
+  }
+  .nav-dropdown {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(242, 226, 131);
+    border-radius: 0 0 2px 2px;
+    background: linear-gradient(
+      180deg,
+      rgba(242, 226, 131, 1) 0%,
+      rgba(163, 126, 35, 1) 81%,
+      rgba(163, 126, 35, 1) 100%
+    );
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 45px;
+    width: 100vw;
+    a {
+      display: inline-block;
+      width: 49%;
+      color: map-get($theme-color, "darkB");
+      padding: 8px 0;
+      &:first-of-type {
+        border-right: 1px solid map-get($theme-color, "darkB");
+      }
+    }
+  }
 }
 
 .mobile-nav.active {
-	transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 // pop up
 .modal-content {
-	background: #0c151e;
-	position: relative;
-	border: none;
-	color: map-get($theme-color, "wh");
-	&:before,
-	&:after {
-		@include pseudo(absolute, transparent);
-		width: 500px;
-		height: 40px;
-		left: calc(50% - 250px);
-	}
-	&:before {
-		top: -3px;
-		background: url("../img/pageItem/modal/modalTopAlignc.png");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 500px;
-		@include mobile {
-			top: -10px;
-			background-size: 300px;
-		}
-	}
-	&:after {
-		bottom: -5px;
-		background: url("../img/pageItem/modal/modalBottomAlignc.png");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 500px;
-		background-color: #0c151e;
-		width: 100%;
-		left: 0;
-		@include mobile {
-			background-size: 300px;
-			bottom: -10px;
-		}
-	}
-	.close {
-		@include size(84px, 84px);
-		opacity: 0.7;
-		&:not(:disabled):not(.disabled):hover {
-			opacity: 1;
-		}
-		@include tablet {
-			padding: 0rem 0rem;
-			margin: -2rem -2rem -1rem auto;
-		}
-		img {
-			@include tablet {
-				width: 36px;
-			}
-		}
-	}
+  background: #0c151e;
+  position: relative;
+  border: none;
+  color: map-get($theme-color, "wh");
+  &:before,
+  &:after {
+    @include pseudo(absolute, transparent);
+    width: 500px;
+    height: 40px;
+    left: calc(50% - 250px);
+  }
+  &:before {
+    top: -3px;
+    background: url("../img/pageItem/modal/modalTopAlignc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+    @include mobile {
+      top: -10px;
+      background-size: 300px;
+    }
+  }
+  &:after {
+    bottom: -5px;
+    background: url("../img/pageItem/modal/modalBottomAlignc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-color: #0c151e;
+    width: 100%;
+    left: 0;
+    @include mobile {
+      background-size: 300px;
+      bottom: -10px;
+    }
+  }
+  .close {
+    @include size(84px, 84px);
+    opacity: 0.7;
+    &:not(:disabled):not(.disabled):hover {
+      opacity: 1;
+    }
+    @include tablet {
+      padding: 0rem 0rem;
+      margin: -2rem -2rem -1rem auto;
+    }
+    img {
+      @include tablet {
+        width: 36px;
+      }
+    }
+  }
 }
 .modal {
-	height: 100vh;
-	margin: 5vh 0;
+  height: 100vh;
+  margin: 5vh 0;
 
-	@include mobile {
-		height: 90vh;
-	}
-	.modal-header {
-		border: none;
-		padding: 25px 20px 5px 15px;
-	}
-	.modal-body {
-		padding: 0 2rem 2rem 2rem;
-		font-size: 15px;
-		@include tablet {
-			padding: 0 1rem 2rem 1rem;
-		}
-		@include mobile {
-			font-size: 13px;
-			padding: 0 1rem 3rem 1rem;
-		}
-	}
-	.modal-dialog {
-		max-width: 760px;
-		width: 80%;
-		margin: 0 auto;
-		@include mobile {
-			width: 90%;
-		}
-	}
-	a {
-		color: map-get($theme-color, "neonB");
-		text-decoration: underline;
-	}
-	li {
-		line-height: 1.6em;
-	}
-	// custom scrollbar
-	/* width */
-	::-webkit-scrollbar {
-		width: 12px;
-	}
+  @include mobile {
+    height: 90vh;
+  }
+  .modal-header {
+    border: none;
+    padding: 25px 20px 5px 15px;
+  }
+  .modal-body {
+    padding: 0 2rem 2rem 2rem;
+    font-size: 15px;
+    @include tablet {
+      padding: 0 1rem 2rem 1rem;
+    }
+    @include mobile {
+      font-size: 13px;
+      padding: 0 1rem 3rem 1rem;
+    }
+  }
+  .modal-dialog {
+    max-width: 760px;
+    width: 80%;
+    margin: 0 auto;
+    @include mobile {
+      width: 90%;
+    }
+  }
+  a {
+    color: map-get($theme-color, "neonB");
+    text-decoration: underline;
+  }
+  li {
+    line-height: 1.6em;
+  }
+  // custom scrollbar
+  /* width */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
 
-	/* Track */
-	::-webkit-scrollbar-track {
-		background: map-get($theme-color, "darkB");
-	}
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: map-get($theme-color, "darkB");
+  }
 
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-		background: #223b55;
-		border-radius: 20px;
-	}
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #223b55;
+    border-radius: 20px;
+  }
 
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-		background: map-get($theme-color, "lightB");
-	}
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: map-get($theme-color, "lightB");
+  }
 }
 table {
-	width: 100%;
-	margin: 10px 0;
+  width: 100%;
+  margin: 10px 0;
 }
 
 table,
 tr,
 td {
-	border: 1px solid #6e5b34;
+  border: 1px solid #6e5b34;
 }
 
 td {
-	padding: 4px;
-	text-align: center;
+  padding: 4px;
+  text-align: center;
 }
 
 #back-to-top {
-	width: 45px;
-	height: 45px;
-	position: fixed;
-	right: 5px;
-	bottom: 2%;
-	transition: all ease 0.4s;
-	cursor: pointer;
-	@include lgTablet {
-		bottom: calc(2% + 80px);
-	}
-	@include mobile {
-		@include size(30px, 30px);
-	}
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  right: 5px;
+  bottom: 2%;
+  transition: all ease 0.4s;
+  cursor: pointer;
+  @include lgTablet {
+    bottom: calc(2% + 80px);
+  }
+  @include mobile {
+    @include size(30px, 30px);
+  }
 }
 
 //-ie specific
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	.kv-slogan-wrap {
-		&:after {
-			display: none;
-		}
-	}
-	.hero-title-col::before,
-	.hero-title-col::after {
-		width: calc(50% - 88px);
-		background-color: map-get($theme-color, "gold");
-		@include mobile {
-			width: calc(50% - 60px);
-		}
-	}
-	.hero-title-col::after {
-		left: initial;
-		right: 0;
-	}
-	.gift-sec .nu-account-wrap .nu-account-col {
-		width: 260px;
-	}
-	.hero-intro-wrap .round-switcher .switcher-title:last-of-type:after {
-		left: auto;
-		right: 0;
-	}
+  .kv-slogan-wrap {
+    &:after {
+      display: none;
+    }
+  }
+  .hero-title-col::before,
+  .hero-title-col::after {
+    width: calc(50% - 88px);
+    background-color: map-get($theme-color, "gold");
+    @include mobile {
+      width: calc(50% - 60px);
+    }
+  }
+  .hero-title-col::after {
+    left: initial;
+    right: 0;
+  }
+  .gift-sec .nu-account-wrap .nu-account-col {
+    width: 260px;
+  }
+  .hero-intro-wrap .round-switcher .switcher-title:last-of-type:after {
+    left: auto;
+    right: 0;
+  }
 }
 
 // additional slick slider arrow
 .slick-arrow.slick-disabled {
-	display: none !important;
+  display: none !important;
 }
 
 .fake-arrow {
-	@include size(28px, 52px);
-	position: absolute;
-	display: block;
-	top: 50%;
-	transform: translate(0, -50%);
-	outline: 0;
-	border: none;
-	z-index: 8;
-	max-width: 100%;
-	@include mobile {
-		@include size(20px, 37px);
-	}
-	&:before {
-		position: absolute;
-		content: "";
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		animation: arrowOpacity 3s infinite;
-		@include size(28px, 52px);
-		@include mobile {
-			@include size(20px, 37px);
-		}
-	}
+  @include size(28px, 52px);
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translate(0, -50%);
+  outline: 0;
+  border: none;
+  z-index: 8;
+  max-width: 100%;
+  @include mobile {
+    @include size(20px, 37px);
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: arrowOpacity 3s infinite;
+    @include size(28px, 52px);
+    @include mobile {
+      @include size(20px, 37px);
+    }
+  }
 }
 
 .fake-arrow-next {
-	// border: solid red 1px;
-	background-color: transparent;
-	right: -25px;
-	@include mobile {
-		right: -12px;
-	}
-	&:before {
-		background: url("../img/pageItem/heroIntro/rightArrow.png");
-		background-size: contain;
-		background-repeat: no-repeat;
-		left: unset;
-		right: 0;
-	}
+  // border: solid red 1px;
+  background-color: transparent;
+  right: -25px;
+  @include mobile {
+    right: -12px;
+  }
+  &:before {
+    background: url("../img/pageItem/heroIntro/rightArrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: unset;
+    right: 0;
+  }
 }
 
 .fake-arrow-prev {
-	// background-color: purple;
-	background-color: transparent;
-	left: -25px;
-	@include mobile {
-		left: -12px;
-	}
-	&:before {
-		left: 0;
-		background: url(../img/pageItem/heroIntro/leftArrow.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
+  // background-color: purple;
+  background-color: transparent;
+  left: -25px;
+  @include mobile {
+    left: -12px;
+  }
+  &:before {
+    left: 0;
+    background: url(../img/pageItem/heroIntro/leftArrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
